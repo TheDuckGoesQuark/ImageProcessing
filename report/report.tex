@@ -1,0 +1,267 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[explicit]{titlesec}
+\usepackage{url}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE University of St Andrews}\\[1.5cm] % Name of your university/college
+\textsc{\Large CS4302 Coursework 2}\\[0.5cm] % Major heading such as course name
+\textsc{\large }\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Audio Processing}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+
+\Large \emph{Author:}\\
+ \textsc{150008022}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%---------------------------------------------------------------------------------------
+
+\includegraphics[width = 3.1cm]{images/standrewslogo.png}
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\part*{Goal}
+
+The goal of this practical was to learn through practice various aspects of audio signal processing. Matlab\textsuperscript{\textregistered} was to be used for the processing.
+
+\part*{Tasks}
+
+The scripts are separated by task given in the practical specification. Where useful, scripts were created to hold functions that were used repeatedly. To run each practical task in order, the script \emph{practical.m} can be used. Figures and sounds will be generated whilst each script runs. Some tasks were implemented in two ways, and can be identified by the alphabetic letter following the number of the task in the script name.
+
+\section{Middle C}
+
+Middle C is approximately 261.6Hz, though concert pitch has varied historically. To plot this, a sine wave of the same frequency was generated. 
+
+Originally a sampling frequency of $2f$ was used, as Nyquist theorem dictates that the sampling rate must be at least double the highest frequency in the signal. However, MATLAB refused to play at this rate, as the documentation states that only values of $1000Hz \leq Fs \leq 384000Hz$ are accepted by the audioplayer function \cite{matlabaudioplayer}. Instead, the sample rate used for high quality music was used instead, $48kHz$. Graphing the wave at $1000Hz$ showed a far less smooth wave in the time domain, though it did not affect the frequency domain plot (Figure \ref{fig:middleclowsample}).
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{images/figure1at1000.png}
+  \caption{Time and Frequency domain of Middle C at a low sample rate.}
+  \label{fig:middleclowsample}
+\end{figure}
+
+To generate ten seconds of audio, the length of a single sample was determined using the equation $$P = \frac{1}{f}$$ where $P$ is the duration in seconds and $f$ is the sample frequency in hertz. $\frac{10}{P}$ then produced the number of samples necessary to produce ten seconds of audio. 
+
+In order to produce the amplitude over time for the given frequency, we first needed to convert the frequency from hertz to radians per second using the equation $$\omega = 2 \pi f$$ Then we could use the simple harmonic oscillator equation with $\phi = 0$ and $A = 1$ to produce the displacement from equilibrium of the wave at some time $t$ 
+
+$$y = A\sin{(\omega t - \phi)}$$
+
+Matlab greatly simplified the process of producing these values over a range of time through its use of matrices as a standard data type. Out of curiosity, the value of $A$ was changed to see if the resulting sound was louder when played later, and this was confirmed to be true as expected.
+
+The time domain was then graphed, and zoomed in by a factor of 100 so that the actual wave structure was visible (Figure \ref{fig:middlec}). The unit of metres was used for the amplitude, though the perceived amplitude of the sound would actually be dependant on speakers and external settings when played.
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{images/figure1.png}
+  \caption{Time and Frequency domain of Middle C at a high sample rate.}
+  \label{fig:middlec}
+\end{figure}
+
+Since plotting the frequency domain was such a common task in this practical, it was abstracted into a function script \emph{frequencyDomainPlot.m}. First, the Nyquist limit was calculated using the sample frequency so that frequencies that could not exist within the signal were not plotted. Fast Fourier Transform was then applied to the signal, and shifted so that the zero frequency component was centred in the array. The magnitude axis was produced by taking the second half of values in the fft matrix and taking their absolute value. The magnitude values for negative frequencies, which were not useful for plotting, though they were necessary for inverting the fft later on. The frequency axis was generated by producing evenly spaced values from 0 to Nyquist limit. This produced the bottom graph in Figure \ref{fig:middlec}. Zooming into the graph was enabled using \emph{zoom xon}, and this showed that the peak appeared at 261Hz as hoped. Experimenting with various durations of signal also showed that this affected the accuracy of the fft, spreading the peak over a larger range of frequencies as the duration decreased (Figure \ref{fig:middlecshort}). The change in time domain plot is only due to the constant zoom being applied to a short range of x-axis values, not an actual change of frequency.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/figure1short.png}
+  \caption{Time and Frequency domain of Middle C at a high sample rate.}
+  \label{fig:middlecshort}
+\end{figure}
+
+The sound produced had a constant intensity and absolutely no variation in pitch. The lack of any other frequencies results in a very unnatural sound.
+
+\section{Time Domain}
+
+Plotting the time domain followed a similar process as in Task 1. Instead of hard coding a sample frequency however, it was supplied by the audio file itself. From then on, the same process could be applied to the signal as before to produce Figure \ref{fig:voicetimedomain} and Figure \ref{fig:musictimedomain}. 
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{images/figure2a.png}
+  \caption{Time domain plot of my voice.}
+  \label{fig:voicetimedomain}
+\end{figure}
+
+Both plots show that the signals are roughly equally as dense. There also appears to be more noise present in the voice recording, as the 'silence' between blocks of speech appears far rougher than the silence between notes in the music plot. There is also more variation in amplitude in the voice plot.
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{images/figure2b.png}
+  \caption{Time domain plot of the Mii Channel Music \cite{miichannelmusic}.}
+  \label{fig:musictimedomain}
+\end{figure}
+
+\section{Frequency Domain}
+
+The same function used for Task 1 was reused here, but this time it produced a more interesting spectrum of frequencies. The high sample used in both files resulted in a large empty space in the original frequency plot, and so a limit was applied so that only frequencies up until $7kHz$ were plotted in Figure \ref{fig:voicemusicfrequencydomain}.
+
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{images/figure3.png}
+  \caption{Time domain plot of the Mii Channel Music\cite{miichannelmusic}.}
+  \label{fig:voicemusicfrequencydomain}
+\end{figure}
+
+The voice plot appears to have a much more diverse spectrum compared to the music plot. This is likely due to the music only containing frequencies belonging to the notes being played, which are usually constrained within a key. The glissando near the end of the music likely introduced more frequencies outside of they key however.
+
+The most prevalent frequency in the voice plot is around $125Hz$, which lies on the upper end of the range of male voice fundamental frequencies. The most prevalent frequency in the music plot is around $386Hz$, which is likely to be a 4th octave G in an equal tempered scale \cite{musictonotes}.
+
+\section{Frequency Filtering}
+
+For frequency filtering, I used two methods. The first is my own implementation and the other is using Matlab's \emph{bandpass} function.
+
+For my custom bandpass filter, I took the following steps:
+\begin{enumerate}
+\item Produce the fft of the signal and perform the fft shift.
+\item Produce a frequency axis for the signal.
+\item Zero any values in the frequency axis that are outside the frequency band specified, both in the positive and negative frequencies. 
+\item Set all other values in the frequency axis to 1.
+\item Multiply the fft matrix by the frequency matrix ,effectively zeroing any coefficients that belong to unwanted frequencies.
+\item Reverse the fftshift and fft to produce the original signal.
+\end{enumerate}
+
+This allowed the same function to be used as both a low-pass (0 to x) and high-pass (x to inf) filter, as well as a bandpass filter.
+
+I applied the same filter to both, allowing frequencies in the range 1kHz to 2.5kHz. This removed the most prevalent frequencies from both sound files, whilst still leaving audible features. Both recordings gained a sinister feel. Words became unintelligible in the voice recording. Despite knowing exactly what was said, it was incredibly difficult to work out which part of the clip corresponded to which word, even though the time domain plot still retained most of the original features. The loudness of the track was drastically reduced.
+
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{images/customfilteredvoice.png}
+  \caption{Frequency and time domain plot of my voice after applying the custom filter.}
+  \label{fig:customvoicefilter}
+\end{figure}
+
+The music recording still held most of its features, especially the glissando towards the end. The track sounded as though it was being played through an old radio. After realising the filter had a similar effect on sound as the tone control on an electric guitar, I found out that the this control reduces higher frequencies in the output, which is what had also occurred with the signal in the custom filter.
+
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{images/customfilteredmusic.png}
+  \caption{Frequency and time domain plot of music after appylying the custom filter.}
+  \label{fig:custommusicfilter}
+\end{figure}
+
+The Matlab bandpass filter was less destructive. For the voice filter, words were still unintelligible, and it sounded as though I had a cold. Looking into this, I found that our nose and sinuses act as a resonance chamber, which essentially amplifies certain frequencies in speech, mostly the lower frequencies. Similar to the effect the hollow body of a guitar has on the sound it produces. 
+
+The frequency plots for both (Figure \ref{fig:matlabvoicefilter} and Figure \ref{fig:matlabmusicfilter})showed a gradual drop off in magnitude of edge frequencies, rather than the sharp drop off seen in the custom filter. I struggled to find exactly what filter is used by the \emph{bandpass} function, but the gradual roll-off without any ripples suggests it is likely to be a Butterworth filter \cite{butterworth_1930}. The only information was that the filter used a minimum-order filter, and this roll off is made more gradual at low orders in a Butterworth filter. Increasing the order introduces more ripple however, which degrades the audio quality.
+
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{images/matlabfiltervoice.png}
+  \caption{Frequency and time domain plot of music after appylying the built-in filter.}
+  \label{fig:matlabvoicefilter}
+\end{figure}
+
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{images/matlabfiltermusic.png}
+  \caption{Frequency and time domain plot of music after appylying the built-in filter.}
+  \label{fig:matlabmusicfilter}
+\end{figure}
+
+\section{Identifying Noise}
+
+In order to identify the noise, a frequency plot had to be produced. Using fast Fourier transform as before, Figure \ref{fig:noisefrequencydomain} was produced which clearly shows the frequency of the incredibly unpleasant whine. Zooming in shows that the peak occurred at 500Hz.
+
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{images/figure6.png}
+  \caption{Frequency plot of audio in noise.}
+  \label{fig:noisefrequencydomain}
+\end{figure}
+
+\section{Removing Noise}
+
+To remove the noise, two approaches were taken.
+
+The first involved using a bandstop, which removed only the small frequency range that the noise occurred in. This unfortunately introduced a metallic ringing sound to the blocks of speech in the audio, though it did a brilliant job of removing the high frequency whine (Figure \ref{fig:noisebandstopped}). The high frequency ringing sound added to speech was further evidence that the Butterworth filter was used for Matlabs bandstop/bandpass functions, as one of the characteristics of this filter is overshoot and ringing in step response. The new peaks introduced in the frequency plot are likely the contributors to the ringing sound. The highest frequency was past the range of human hearing, and so its magnitude was not a problem.
+
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{images/figure6a.png}
+  \caption{Frequency and time domain plot of audio in noise once filtered using bandstop.}
+  \label{fig:noisebandstopped}
+\end{figure}
+
+The alternative approach involved using a low pass filter to remove everything below the noise frequency. This was also successful, though the ringing was still present above the voice. The large high frequency peaks also were not present, suggesting the ringing present in the voice was being caused by a lower frequency component.
+
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{images/figure6b.png}
+  \caption{Frequency and time domain plot of audio in noise once filtered using lowpass.}
+  \label{fig:noiselowpassed}
+\end{figure}
+
+Another method I attempted was to generate a signal of the same frequency as the noise and remove it by subtraction. However, this would require also knowing the phase of the signal, which would require a lot of brute forcing, or a more thorough analysis of the output of the fft. 
+
+\section{Extension}
+
+Now that I had gained some confidence in my understanding of Matlab , I tried to implement time-domain scrambling as an extension. To do so, I first declared how large my frames should be in seconds. I then calculated how many samples per frame, and used this to break the signal into frames. 
+
+For the scrambling key, I created a numbered list from 1 to the number of frames, and then reordered them. The scrambled signal matrix was then constructed by appending the frame in the row number given by the scrambling key. Listening back, I can still identify parts of speech, but all meaning is lost. Using the \emph{vertcat} function instead of iteratively appending the samples resulted in an incredibly large performance boost, which highlighted the effectiveness of Matlab for this sort of processing. The before and after effect of scrambling on the time domain plot can be seen in Figure \ref{fig:scrambled}. The same scrambling matrix could then be used to inverse the scrambling through a similar process, though the padding used to extend the signals to the same length for plotting would have to also be avoided as it would introduce silence to the middle of the audio.
+
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{images/scrambled.png}
+  \caption{Time domain of my voice before (top) and after (bottom) being scrambled.}
+  \label{fig:scrambled}
+\end{figure}
+
+\part*{Conclusion}
+
+This practical was incredibly enjoyable (excluding the whine), and greatly helped my understanding of Matlab. Actually implementing the technologies discussed in lectures resulted in many rabbit holes of learning, and a better understanding of the content. For example, the various types of audio filters and their pros and cons, and why it isn't as simple as 'blocking' the unwanted frequencies. 
+
+I realised only close to the deadline that since on the schools Windows installs, the older version of Matlab (2017a) is used, and it did not have the bandpass function yet. However, in 2018b, it does exist, and so the scripts will only work on the linux machines. Given more time, I would have liked to replace the bandpass function with the more specific filters available, such as elliptical and chebyshev filters. 
+
+\bibliographystyle{unsrt}
+\bibliography{mybib}
+
+\end{document}
