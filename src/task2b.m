@@ -11,37 +11,28 @@ info = imfinfo(filename);
 [r,g,b] = isolateRGB(X);
 [y,Cb,Cr] = rgbToYCbCr(r,g,b);
 imgYCbCr=cat(3,y,Cb,Cr);
-% imgYCbCr = rgb2ycbcr(X);
 
-figure(1)
+figure(2)
 colorplot = subplot(2,2,1);
 imshow(imgYCbCr)
-title(colorplot, "Original Image (Full colour)")
+title(colorplot, "YCbCr Image")
 
 % half intensity for all values in RGB
 halfIntensityMatrix = 128 + zeros(size(X, 1), size(X,2));
 
-yRGB = ycbcr2rgb(cat(3,y,halfIntensityMatrix, halfIntensityMatrix));
-CbRGB = ycbcr2rgb(cat(3, halfIntensityMatrix, Cb, halfIntensityMatrix));
-CrRGB = ycbcr2rgb(cat(3, halfIntensityMatrix, halfIntensityMatrix, Cr));
+% Convert to RGB for rendering
+yRGB = YCbCrToRGB(cat(3,y,halfIntensityMatrix, halfIntensityMatrix));
+CbRGB = YCbCrToRGB(cat(3, halfIntensityMatrix, Cb, halfIntensityMatrix));
+CrRGB = YCbCrToRGB(cat(3, halfIntensityMatrix, halfIntensityMatrix, Cr));
 
 luminancePlot = subplot(2,2,2);
 imshow(yRGB);
-luminancePlotColorMap = zeros(256,3);
-colormap(luminancePlot, luminancePlotColorMap);
-colorbar
 title(luminancePlot, "Y Component")
 
 CbPlot = subplot(2,2,3);
 imshow(CbRGB)
-cbColorMap = [zeros(256,1), linspace(0,1,256)', zeros(256,1)];
-colormap(CbPlot, cbColorMap);
-colorbar
 title(CbPlot, "Chromatic Blue Components")
 
 CrPlot = subplot(2,2,4);
 imshow(CrRGB)
-crColorMap = [zeros(256,2), linspace(0,1,256)'];
-colormap(CrPlot, crColorMap);
-colorbar
 title(CrPlot, "Chromatic Red Components")
