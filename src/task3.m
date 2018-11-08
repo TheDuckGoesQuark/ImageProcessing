@@ -10,24 +10,36 @@ info = imfinfo(filename);
 
 yCbCr = rgb2ycbcr(X);
 
-y = yCbCr(:,:,1);
-Cb = yCbCr(:,:,2);
-Cr = yCbCr(:,:,3);
-
+% Break each image into cells
 imageCells = imageToCells(yCbCr, [8,8]);
 
+% Replace all values on CbCr planes
+imageCells = averageCells(imageCells);
+
+averagedYCbCr = cell2mat(imageCells);
+subsampledYCbCr = yCbCr;
+for channel = [2,3] 
+	subsampledYCbCr(:,:,channel) = averagedYCbCr(:,:,channel);
+end
+
+y = subsampledYCbCr(:,:,1);
+Cb = subsampledYCbCr(:,:,2);
+Cr = subsampledYCbCr(:,:,3);
+
+imageSize = size(X);
+halfIntensityMatrix = 128 + zeros(imageSize(1), imageSize(2));
 
 % Convert to RGB for rendering
-yCbCr = cat(3, y,					  Cb,				   Cr);
+downsampledYCbCr= cat(3, y,					  Cb,				   Cr);
 yRGB  = ycbcr2rgb(cat(3, y,  				  halfIntensityMatrix, halfIntensityMatrix));
 CbRGB = ycbcr2rgb(cat(3, halfIntensityMatrix, Cb, 				   halfIntensityMatrix));
 CrRGB = ycbcr2rgb(cat(3, halfIntensityMatrix, halfIntensityMatrix, Cr));
 
 % Plots
-figure(1)
+figure(2)
 colorplot = subplot(2,2,1);
-imshow(yCbCr)
-title(colorplot, "Downsampled YCbCr Image")
+imshow(ycbcr2rgb(subsampledYCbCr))
+title(colorplot, "Subsampled YCbCr Image")
 
 luminancePlot = subplot(2,2,2);
 imshow(yRGB);
@@ -40,3 +52,9 @@ title(CbPlot, "Chromatic Blue Components")
 CrPlot = subplot(2,2,4);
 imshow(CrRGB)
 title(CrPlot, "Chromatic Red Components")
+
+figure(3)
+difference = ycbcr2rgb(yCbCr) - ycbcr2rgb(subsampledYCbCr);
+differencePlot = subplot(1,1,1);
+imshow(difference)
+title(differencePlot, "Difference in images")

@@ -9,7 +9,5 @@ function imageCells = imageToCells(image, cellDimensions)
 	blockRowDims = [rowsInBlock * ones(wholeBlockRows, 1)];
 	blockColDims = [colsInBlock * ones(wholeBlockCols, 1)];
 	
-	imageCells = mat2cell(image, blockRowDims, blockColDims, [1,1,1]);
-
-	celldisp(imageCells)
+	imageCells = mat2cell(image, blockRowDims, blockColDims, 3);
 end
