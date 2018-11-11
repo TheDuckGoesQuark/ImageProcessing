@@ -34,7 +34,7 @@ fourierTransform = fftshift(fourierTransform);
 magnitudeAxis = abs(fourierTransform(length(fourierTransform) / 2 : length(fourierTransform)));
 frequencyAxis = nyquistLimit * linspace(0, 1, length(magnitudeAxis));
 
-figure(200);
+figure(getNextFigureNumber());
 
 luminancePlot = subplot(2, 1, 1);
 plot(timeaxis, averages)
