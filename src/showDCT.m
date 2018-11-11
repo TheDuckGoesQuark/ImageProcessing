@@ -8,33 +8,47 @@ function [] = showDCT(filename, figureNumber)
 		Cb = yCbCr(:,:,2);
 		Cr = yCbCr(:,:,3);
 
-		% DCT on each channel
-		y = dct2(y);
-		Cb = dct2(Cb);
-		Cr = dct2(Cr);
-
-		% half intensity for all values in RGB
-		halfIntensityMatrix = 128 + zeros(size(X, 1), size(X,2));
-
-		% Convert to RGB for rendering
-		yRGB = ycbcr2rgb(cat(3,y,halfIntensityMatrix, halfIntensityMatrix));
-		CbRGB = ycbcr2rgb(cat(3, halfIntensityMatrix, Cb, halfIntensityMatrix));
-		CrRGB = ycbcr2rgb(cat(3, halfIntensityMatrix, halfIntensityMatrix, Cr));
-
+		% DCT on luminance channel for spatial frequency 
+		dcty = dct2(y);
+		dctCb = dct2(Cb);
+		dctCr = dct2(Cr);
+	    
+		% Show results of DCT
 		figure(figureNumber)
 
 		fullplot = subplot(2,2,1);
-		imshow(ycbcr2rgb(yCbCr))
+		imshow(X)
 		title(fullplot, "Full Image")
 
-		luminancePlot = subplot(2,2,2);
-		imshow(yRGB);
-		title(luminancePlot, "Y Component")
+		dctplot = subplot(2,2,2);
+		imshow(log(abs(dcty)));
+		axis square, colorbar
+		title(dctplot, "Y Component")
 
 		CbPlot = subplot(2,2,3);
-		imshow(CbRGB)
+		imshow(log(abs(dctCr)));
 		title(CbPlot, "Chromatic Blue Components")
 
 		CrPlot = subplot(2,2,4);
-		imshow(CrRGB)
+		imshow(log(abs(dctCb)));
 		title(CrPlot, "Chromatic Red Components")
+
+		%% Extension - Show high and low frequency components
+		%% 			   as used in JPEG compression
+
+		cutoff = 0.5 * 256;
+		highFrequencies = fliplr(tril(fliplr(dcty), cutoff));
+		lowFrequencies = dcty - highFrequencies;
+				
+		figure(figureNumber + 1)
+
+		lowFreqPlot = subplot(1,2,1);
+		imshow(idct2(lowFrequencies));
+		axis square, colorbar
+		title(lowFreqPlot, "Low Frequency Components")
+
+		highFreqPlot = subplot(1,2,2);
+		imshow(idct2(highFrequencies));
+		axis square, colorbar
+		title(highFreqPlot, "High Frequency Component")
+end
