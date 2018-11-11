@@ -34,6 +34,7 @@ function [] = showRGB(filename, figureNumber)
 		title(blueplot, "Blue Components");
 
 		% Save figures to file
-		saveas(fig1, strcat(filename, "r.png")); saveas(fig2, strcat(filename, "g.png"));
-		saveas(fig3, strcat(filename, "b.png"));
+		%saveas(fig1, strcat(filename, "r.png")); 
+		%saveas(fig2, strcat(filename, "g.png"));
+		%saveas(fig3, strcat(filename, "b.png"));
 end
