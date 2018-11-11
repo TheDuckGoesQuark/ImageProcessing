@@ -1,0 +1,43 @@
+clear;
+
+file = "images/heart_rate_vid.MOV";
+
+% Read in file
+v = VideoReader(file);
+
+% Calculate number of frames
+frameRate = v.FrameRate;
+duration = v.Duration;
+frameDuration = 1 / frameRate;
+numberOfFrames = floor(duration / frameDuration);
+
+% Calculate average luminance for each frame
+averages = zeros(numberOfFrames);
+timeaxis = 0:frameDuration:((numberOfFrames*frameDuration)-frameDuration);
+for i = 1:numberOfFrames
+	frame = read(v,i);
+	ycbcr = rgb2ycbcr(frame);
+	luminance = ycbcr(:,:,1);
+	averages(i) = mean(luminance, 'all');
+end
+
+% Normalise values to centre at 0 
+middleValue = mean(averages);
+averages = averages - middleValue;
+
+nyquistLimit = frameRate / 2;
+fourierTransform = fft(averages);
+fourierTransform = fftshift(fourierTransform);
+magnitudeAxis = abs(fourierTransform(length(fourierTransform) / 2 : length(fourierTransform)));
+frequencyAxis = nyquistLimit * linspace(0, 1, length(magnitudeAxis));
+
+figure(200);
+
+luminancePlot = subplot(2, 1, 1);
+plot(timeaxis, averages)
+title(luminancePlot, "Red Components")
+
+freqplot = subplot(2, 1, 2);
+plot(magnitudeAxis, frequencyAxis)
+title(freqplot, "Frequencies")
+
