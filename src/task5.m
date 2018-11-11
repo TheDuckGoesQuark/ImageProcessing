@@ -22,10 +22,13 @@ for i = 1:numberOfFrames
 end
 
 % Normalise values to centre at 0 
+maxValue = max(averages);
+averages = averages / maxValue;
 middleValue = mean(averages);
 averages = averages - middleValue;
 
-nyquistLimit = frameRate / 2;
+
+nyquistLimit = ceil(frameRate / 2);
 fourierTransform = fft(averages);
 fourierTransform = fftshift(fourierTransform);
 magnitudeAxis = abs(fourierTransform(length(fourierTransform) / 2 : length(fourierTransform)));
@@ -35,9 +38,9 @@ figure(200);
 
 luminancePlot = subplot(2, 1, 1);
 plot(timeaxis, averages)
-title(luminancePlot, "Red Components")
+title(luminancePlot, "Normalied Average Luminance Value Over Time")
 
 freqplot = subplot(2, 1, 2);
-plot(magnitudeAxis, frequencyAxis)
-title(freqplot, "Frequencies")
+plot(frequencyAxis, magnitudeAxis)
+title(freqplot, "FFT of Average Luminance Over Time")
 
