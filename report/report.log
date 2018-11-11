@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.3)  11 NOV 2018 16:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.3)  11 NOV 2018 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -613,314 +613,54 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
-
-
-LaTeX Warning: File `images/colorful.jpg' not found on input line 98.
-
-
-! Package pdftex.def Error: File `images/colorful.jpg' not found: using draft s
-etting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.98 ...ics[width=\linewidth]{images/colorful.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `images/figure1at1000.png' not found on input line 102.
-
-
-! Package pdftex.def Error: File `images/figure1at1000.png' not found: using dr
-aft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.102 ...dth=\linewidth]{images/figure1at1000.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `images/figure1at1000.png' not found on input line 106.
-
-
-! Package pdftex.def Error: File `images/figure1at1000.png' not found: using dr
-aft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 ...dth=\linewidth]{images/figure1at1000.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Float too large for page by 704.32248pt on input line 109.
-
-
-LaTeX Warning: File `images/figure1at1000.png' not found on input line 118.
-
-
-! Package pdftex.def Error: File `images/figure1at1000.png' not found: using dr
-aft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.118 ...dth=\linewidth]{images/figure1at1000.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[1]
-
-LaTeX Warning: File `images/figure1.png' not found on input line 134.
-
-
-! Package pdftex.def Error: File `images/figure1.png' not found: using draft se
-tting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.134 ...ics[width=\linewidth]{images/figure1.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `images/figure1short.png' not found on input line 142.
-
-
-! Package pdftex.def Error: File `images/figure1short.png' not found: using dra
-ft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.142 ...idth=\linewidth]{images/figure1short.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2]
-
-LaTeX Warning: File `images/figure2a.png' not found on input line 154.
-
-
-! Package pdftex.def Error: File `images/figure2a.png' not found: using draft s
-etting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154 ...cs[width=\linewidth]{images/figure2a.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `images/figure2b.png' not found on input line 162.
-
-
-! Package pdftex.def Error: File `images/figure2b.png' not found: using draft s
-etting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.162 ...cs[width=\linewidth]{images/figure2b.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `images/figure3.png' not found on input line 172.
-
-
-! Package pdftex.def Error: File `images/figure3.png' not found: using draft se
-tting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.172 ...ics[width=\linewidth]{images/figure3.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[3]
-
-LaTeX Warning: File `images/customfilteredvoice.png' not found on input line 20
-0.
-
-
-! Package pdftex.def Error: File `images/customfilteredvoice.png' not found: us
-ing draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.200 ...inewidth]{images/customfilteredvoice.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `images/customfilteredmusic.png' not found on input line 20
-8.
-
-
-! Package pdftex.def Error: File `images/customfilteredmusic.png' not found: us
-ing draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.208 ...inewidth]{images/customfilteredmusic.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `images/matlabfiltervoice.png' not found on input line 218.
-
-
-
-! Package pdftex.def Error: File `images/matlabfiltervoice.png' not found: usin
-g draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.218 ...\linewidth]{images/matlabfiltervoice.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `images/matlabfiltermusic.png' not found on input line 224.
-
-
-
-! Package pdftex.def Error: File `images/matlabfiltermusic.png' not found: usin
-g draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.224 ...\linewidth]{images/matlabfiltermusic.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[4]
-
-LaTeX Warning: File `images/figure6.png' not found on input line 234.
-
-
-! Package pdftex.def Error: File `images/figure6.png' not found: using draft se
-tting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.234 ...ics[width=\linewidth]{images/figure6.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `images/figure6a.png' not found on input line 246.
-
-
-! Package pdftex.def Error: File `images/figure6a.png' not found: using draft s
-etting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.246 ...cs[width=\linewidth]{images/figure6a.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `images/figure6b.png' not found on input line 254.
-
-
-! Package pdftex.def Error: File `images/figure6b.png' not found: using draft s
-etting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.254 ...cs[width=\linewidth]{images/figure6b.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[5]
-
-LaTeX Warning: File `images/scrambled.png' not found on input line 268.
-
-
-! Package pdftex.def Error: File `images/scrambled.png' not found: using draft 
-setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.268 ...s[width=\linewidth]{images/scrambled.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./report.bbl
+<images/colourful.jpg, id=16, 1027.84pt x 770.88pt>
+File: images/colourful.jpg Graphic file (type jpg)
+<use images/colourful.jpg>
+Package pdftex.def Info: images/colourful.jpg  used on input line 97.
+(pdftex.def)             Requested size: 390.0pt x 292.50223pt.
+<images/drawing.png, id=17, 778.545pt x 552.975pt>
+File: images/drawing.png Graphic file (type png)
+<use images/drawing.png>
+Package pdftex.def Info: images/drawing.png  used on input line 103.
+(pdftex.def)             Requested size: 390.0pt x 277.00153pt.
+<images/simple.jpg, id=18, 1027.84pt x 770.88pt>
+File: images/simple.jpg Graphic file (type jpg)
+<use images/simple.jpg>
+Package pdftex.def Info: images/simple.jpg  used on input line 109.
+(pdftex.def)             Requested size: 390.0pt x 292.50223pt.
+ [1 <./images/colourful.jpg>] [2 <./images/drawing.png>] [3 <./images/simple.jp
+g>]
+
+LaTeX Warning: Reference `fig:middlec' on page 4 undefined on input line 132.
+
+
+LaTeX Warning: Reference `fig:voicetimedomain' on page 4 undefined on input lin
+e 138.
+
+[4] [5] [6]
+
+LaTeX Warning: Reference `fig:scrambled' on page 7 undefined on input line 195.
+
+
+[7] (./report.bbl
 Underfull \hbox (badness 1147) in paragraph at lines 4--7
 []\OT1/cmr/m/n/12 Matlab doc-u-men-ta-tion.  $\OT1/cmtt/m/n/12 https : / / uk .
  mathworks . com / help / matlab /
  []
 
-[6]) [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20]
-[21] [22] (./report.aux)
+) [8] (./report.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15294 strings out of 494880
- 288694 string characters out of 6179601
- 347375 words of memory out of 5000000
- 18291 multiletter control sequences out of 15000+600000
- 10854 words of font info for 39 fonts, out of 8000000 for 9000
+ 15283 strings out of 494880
+ 288595 string characters out of 6179601
+ 342276 words of memory out of 5000000
+ 18293 multiletter control sequences out of 15000+600000
+ 11161 words of font info for 40 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,10n,56p,1347b,293s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,10n,56p,1319b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
@@ -932,10 +672,10 @@ blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt12.pfb>
-Output written on report.pdf (23 pages, 179011 bytes).
+Output written on report.pdf (9 pages, 1780399 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

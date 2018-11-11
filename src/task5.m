@@ -34,13 +34,17 @@ fourierTransform = fftshift(fourierTransform);
 magnitudeAxis = abs(fourierTransform(length(fourierTransform) / 2 : length(fourierTransform)));
 frequencyAxis = nyquistLimit * linspace(0, 1, length(magnitudeAxis));
 
-figure(getNextFigureNumber());
+fig0 = figure(getNextFigureNumber());
 
 luminancePlot = subplot(2, 1, 1);
-plot(timeaxis, averages)
-title(luminancePlot, "Normalied Average Luminance Value Over Time")
+plot(timeaxis, averages);
+grid on;
+title(luminancePlot, "Normalied Average Luminance Value Over Time");
 
 freqplot = subplot(2, 1, 2);
-plot(frequencyAxis, magnitudeAxis)
-title(freqplot, "FFT of Average Luminance Over Time")
+plot(frequencyAxis, magnitudeAxis);
+title(freqplot, "FFT of Average Luminance Over Time");
+
+% Save figures to file
+%saveas(fig0, "Frequency.png");
 

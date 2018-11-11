@@ -8,28 +8,30 @@ function [] = showDCT(filename, figureNumber)
 		Cb = yCbCr(:,:,2);
 		Cr = yCbCr(:,:,3);
 
-		% DCT on luminance channel for spatial frequency 
+		% DCT on each channel 
 		dcty = dct2(y);
 		dctCb = dct2(Cb);
 		dctCr = dct2(Cr);
 	    
 		% Show results of DCT
-		figure(figureNumber)
-
-		fullplot = subplot(2,2,1);
+		fig0 = figure(figureNumber);
+		fullplot = subplot(1,1,1);
 		imshow(X)
 		title(fullplot, "Full Image")
 
-		dctplot = subplot(2,2,2);
+		fig1 = figure(figureNumber+1);
+		dctplot = subplot(1,1,1);
 		imshow(log(abs(dcty)));
 		axis square, colorbar
 		title(dctplot, "Y Component")
 
-		CbPlot = subplot(2,2,3);
+		fig2 = figure(figureNumber+2);
+		CbPlot = subplot(1,1,1);
 		imshow(log(abs(dctCr)));
 		title(CbPlot, "Chromatic Blue Components")
 
-		CrPlot = subplot(2,2,4);
+		fig3 = figure(figureNumber+3);
+		CrPlot = subplot(1,1,1);
 		imshow(log(abs(dctCb)));
 		title(CrPlot, "Chromatic Red Components")
 
@@ -40,15 +42,23 @@ function [] = showDCT(filename, figureNumber)
 		highFrequencies = fliplr(tril(fliplr(dcty), cutoff));
 		lowFrequencies = dcty - highFrequencies;
 				
-		figure(figureNumber + 1)
 
-		lowFreqPlot = subplot(1,2,1);
+		fig4 = figure(figureNumber+4);
+		lowFreqPlot = subplot(1,1,1);
 		imshow(idct2(lowFrequencies));
 		axis square, colorbar
 		title(lowFreqPlot, "Low Frequency Components")
 
-		highFreqPlot = subplot(1,2,2);
+		fig5 = figure(figureNumber+5);
+		highFreqPlot = subplot(1,1,1);
 		imshow(idct2(highFrequencies));
 		axis square, colorbar
 		title(highFreqPlot, "High Frequency Component")
+
+		% Save figures to file
+	%	saveas(fig1, strcat(filename, "y.png"));
+	%	saveas(fig2, strcat(filename, "cb.png"));
+	%	saveas(fig3, strcat(filename, "cr.png"));
+	%	saveas(fig4, strcat(filename, "hf.png"));
+	%	saveas(fig5, strcat(filename, "lf.png"));
 end
