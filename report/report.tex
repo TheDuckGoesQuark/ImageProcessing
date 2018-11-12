@@ -433,9 +433,9 @@ For the DCT of figure \ref{fig:colorful}, each channel shows a large spread of s
   \label{fig:colorfulylfspatial}
 \end{figure}
 
-The DCT plots of the vector image show more focused frequencies. Most of the energy is focused in the top left, corresponding to low spatial frequency components. This is likely due to the abundance of long lines and no textures. The large triangle that is present in the DCT of all three channels is likely responsible for producing the curved lines in the image, as it would require a gradual change in the coeffiecients used to move the maxima responsible for generating the line.
+The DCT plots of the vector image show more focused frequencies. Most of the energy is focused in the top left, corresponding to low spatial frequency components. This is likely due to the abundance of long lines and no textures. The large triangle that is present in the DCT of all three channels is likely responsible for producing the curved and diagonal lines in the image, as it would require a gradual change in the coeffiecients used to move the maxima responsible for generating the lines. The Cr frequency image (Figure \ref{fig:drawingcrspatial}) shows more triangles than the Cb image (Figure \ref{fig:drawingcbspatial}), which would correspond to there being more shapes with exclusively red chromaticity than blue.
 
-The plot of the high frequency components supports this, as the curves are very clear in the highpass filtered image.  
+The plot of the highpass filtered image supports this, as the curves are very clear. The lowpass image contains most of the image, due to the large amount of untextured blank space. However, the highpass image shows the curves very brightly. The ripples from the cosine waves that would be canceled out by the low frequency components are visible as streaks from each shape. 
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{images/task4/drawingy.png}
@@ -467,7 +467,7 @@ The plot of the high frequency components supports this, as the curves are very 
   \label{fig:drawingylfspatial}
 \end{figure}
 
-% Simple 
+For the simple image, the concentration of frequencies is almost completely in the low end. The lowpass image shows all white, whilst the high pass image shows the textures in the snow, the dogs coat, and the falling snowflakes. This image would be easily compressed compared to the others as it has the least high frequency components. The vector image could also be compressed without affecting the image quality too much, but aliasing would be present in the curves if overdone.
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{images/task4/simpley.png}
@@ -498,6 +498,8 @@ The plot of the high frequency components supports this, as the curves are very 
   \caption{High spatial frequencies of Y Component of Figure \ref{fig:simple}.}
   \label{fig:simpleylfspatial}
 \end{figure}
+
+\section{Video Analysis}
 
 \part*{Conclusion}
 
