@@ -180,6 +180,29 @@ Figure \ref{fig:drawingblue} was filtered into figures \ref{fig:drawingred}, \re
 
 \section{YCbCr}
 
+For this task, I used both inbuilt \emph{rgb2ycbcr} and \emph{ycbcr2rgb} methods, and then implemented my own respective versions \emph{rgbToYCbCr} and \emph{YCbCrToRGB} in order to better understand the transformation. 
+The equations for the translation between the two colour spaces are shown in equations \ref{eq:RGBToYCbCr} and \ref{YCbCrToRGB} \cite{jpegformatspec}. These equations are specifically for the transition from 8-bit RGB and 256 level YCbCr. In order to ensure that the resulting YCbCr values occupy the full 256 levels available, the values of RGB would have to be normalised if not already 8-bit. 
+
+\begin{equation} \label{eq:RGBToYCbCr}
+	y = 0.299r + 0.587g + 0.114b
+	Cb= -0.1687r - 0.3313g + 0.5b + 128
+	Cr= 0.5r - 0.4187g - 0.0813b + 128
+\end{equation}
+
+\begin{equation} \label{eq:YCbCrtoRGB}
+	r = y + 1.402(Cr - 128)
+	g = y - 0.34414(Cb - 128) - 0.71414(Cr - 128)
+	b = y + 1.772(Cb - 128)
+\end{equation}
+
+Often when transmitted, YCbCr encoders will instead use the range of 16 to 235 for television signals. This is used to combat Gibbs phenomenon \cite{helmberg_1994}, which is introduced in the signal once filtered. The effect of Gibbs phenomemon is shown in figure \ref{fig:gibbs}. The high frequency components visible at sharp transition points introduce unwanted artifacts to the signal. This is likely also the reason for the metallic ringing sound introduced to the signal in the previous practical when a band of frequencies were zeroed from a signal after performing an FFT, and why more effective filters use a gradual drop off when filtering frequencies. The footroom and headrooom supplied by these unused bits are sometimes also used to store metadata on more reliable signals.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/gibbs.svg}
+  \caption{Gibbs Phenomenon when Approximating a Square Signal\cite{gibbs}.}
+  \label{fig:gibbs}
+\end{figure}
+
 \part*{Conclusion}
 
 This practical was incredibly enjoyable (excluding the whine), and greatly helped my understanding of Matlab. Actually implementing the technologies discussed in lectures resulted in many rabbit holes of learning, and a better understanding of the content. For example, the various types of audio filters and their pros and cons, and why it isn't as simple as 'blocking' the unwanted frequencies. 
