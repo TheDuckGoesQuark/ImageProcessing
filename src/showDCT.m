@@ -60,6 +60,6 @@ function [] = showDCT(filename, figureNumber)
 		saveas(fig1, strcat(dir, filename, "y.png"));
 		saveas(fig2, strcat(dir, filename, "cb.png"));
 		saveas(fig3, strcat(dir, filename, "cr.png"));
-		saveas(fig4, strcat(dir, filename, "hf.png"));
-		saveas(fig5, strcat(dir, filename, "lf.png"));
+		saveas(fig4, strcat(dir, filename, "lf.png"));
+		saveas(fig5, strcat(dir, filename, "hf.png"));
 end

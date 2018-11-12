@@ -397,9 +397,107 @@ The simple image was the least affected by downsampling. Since the Cb and Cr val
   \label{fig:simplediff}
 \end{figure}
 
-\section{Downsampling}
+\section{Discrete Cosine Transform}
 
+The spatial frequency was plotted for each channel for each image seperately. Unfortunately I was unable to force colourbars to appear for the correct figures, and so some plots do not have a colorbar that should. The plots were produced by performing the 2D discrete cosine transform (\emph{dct2} function in Matlab) on each channel matrix. For plotting, the log of the absolute value of the results taken. In reality, the DCT is used applied to 8x8 pixel cells at a time, and memoisation is used instead of computation to produce the result. Though the DCT and FFT both provide frequencies, DCTs are able to produce straight lines using fewer coefficients, making it slightly more memory efficient. 
 
+For the DCT of figure \ref{fig:colorful}, each channel shows a large spread of spatial frequencies (Given the large amount of white even at the bottom-right corner of the figure). This is expected, as the image features constant changes in colour, straight and curved lines of varying lengths, and lots of different patterns. As an extension, the low and high frequency components were also isolated. In JPEG compression, the high frequency components would be removed using a similar approach. The plot of the low frequency image shows very little, likely due to the large amount of detail present in the image (though it is suspiciously too little detail, and may be due to error). On the other hand, the high spatial frequency plot contains enough detail to notice details from the orignal image.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/colourfuly.png}
+  \caption{Spatial frequencies of Y Component of Figure \ref{fig:colorful}.}
+  \label{fig:colorfulyspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/colourfulcb.png}
+  \caption{Spatial frequencies of Cb Component of Figure \ref{fig:colorful}.}
+  \label{fig:colorfulcbspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/colourfulcr.png}
+  \caption{Spatial frequencies of Cr Component of Figure \ref{fig:colorful}.}
+  \label{fig:colorfulcrspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/colourfullf.png}
+  \caption{Low spatial frequencies of Y Component of Figure \ref{fig:colorful}.}
+  \label{fig:colorfulylfspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/colourfulhf.png}
+  \caption{High spatial frequencies of Y Component of Figure \ref{fig:colorful}.}
+  \label{fig:colorfulylfspatial}
+\end{figure}
+
+The DCT plots of the vector image show more focused frequencies. Most of the energy is focused in the top left, corresponding to low spatial frequency components. This is likely due to the abundance of long lines and no textures. The large triangle that is present in the DCT of all three channels is likely responsible for producing the curved lines in the image, as it would require a gradual change in the coeffiecients used to move the maxima responsible for generating the line.
+
+The plot of the high frequency components supports this, as the curves are very clear in the highpass filtered image.  
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/drawingy.png}
+  \caption{Spatial frequencies of Y Component of Figure \ref{fig:drawing}.}
+  \label{fig:drawingyspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/drawingcb.png}
+  \caption{Spatial frequencies of Cb Component of Figure \ref{fig:drawing}.}
+  \label{fig:drawingcbspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/drawingcr.png}
+  \caption{Spatial frequencies of Cr Component of Figure \ref{fig:drawing}.}
+  \label{fig:drawingcrspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/drawinglf.png}
+  \caption{Low spatial frequencies of Y Component of Figure \ref{fig:drawing}.}
+  \label{fig:drawingylfspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/drawinghf.png}
+  \caption{High spatial frequencies of Y Component of Figure \ref{fig:drawing}.}
+  \label{fig:drawingylfspatial}
+\end{figure}
+
+% Simple 
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/simpley.png}
+  \caption{Spatial frequencies of Y Component of Figure \ref{fig:simple}.}
+  \label{fig:simpleyspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/simplecb.png}
+  \caption{Spatial frequencies of Cb Component of Figure \ref{fig:simple}.}
+  \label{fig:simplecbspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/simplecr.png}
+  \caption{Spatial frequencies of Cr Component of Figure \ref{fig:simple}.}
+  \label{fig:simplecrspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/simplelf.png}
+  \caption{Low spatial frequencies of Y Component of Figure \ref{fig:simple}.}
+  \label{fig:simpleylfspatial}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task4/simplehf.png}
+  \caption{High spatial frequencies of Y Component of Figure \ref{fig:simple}.}
+  \label{fig:simpleylfspatial}
+\end{figure}
 
 \part*{Conclusion}
 
