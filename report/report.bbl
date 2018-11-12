@@ -1,22 +1,24 @@
 \begin{thebibliography}{1}
 
-\bibitem{matlabaudioplayer}
+\bibitem{jpegformatspec}
+Eric Hamilton.
+\newblock Jpeg file interchange format.
+\newblock \url{https://www.w3.org/Graphics/JPEG/jfif3.pdf}, September 1992.
+\newblock Accessed: 2018-11-05.
+
+\bibitem{helmberg_1994}
+G.~Helmberg.
+\newblock The gibbs phenomenon for fourier interpolation.
+\newblock {\em Journal of Approximation Theory}, 78(1):41--63, 1994.
+
+\bibitem{matlabrgb2ycbcr}
 Matlab documentation.
-\newblock \url{https://uk.mathworks.com/help/matlab/ref/audioplayer.html}.
+\newblock \url{https://uk.mathworks.com/help/images/ref/rgb2ycbcr.html}.
 \newblock Accessed: 2018-11-2.
 
-\bibitem{miichannelmusic}
-Kazumi Totaka.
-\newblock Mii channel music, 2006.
-
-\bibitem{musictonotes}
-Frequencies for equal-tempered scale.
-\newblock \url{https://pages.mtu.edu/~suits/notefreqs.html}.
-\newblock Accessed: 2018-11-2.
-
-\bibitem{butterworth_1930}
-Stephen Butterworth.
-\newblock On the theory of filter amplifiers.
-\newblock {\em Wireless Engineer}, 7:536--541, 1930.
+\bibitem{gibbs}
+Johannes Rössel.
+\newblock Functional approximation of square wave using 125 harmonics.
+\newblock \url{https://commons.wikimedia.org/w/index.php?curid=10212831}.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.3)  12 NOV 2018 22:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.3)  12 NOV 2018 22:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -507,32 +507,26 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (./report.aux
-
-LaTeX Warning: Label `fig:colorfulylfspatial' multiply defined.
-
-
-LaTeX Warning: Label `fig:drawingylfspatial' multiply defined.
-
-
-LaTeX Warning: Label `fig:simpleylfspatial' multiply defined.
-
 )
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
- (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -609,582 +603,384 @@ ABD: EveryShipout initializing macros
 <images/standrewslogo.png, id=4, 185.19188pt x 225.84375pt>
 File: images/standrewslogo.png Graphic file (type png)
 <use images/standrewslogo.png>
-Package pdftex.def Info: images/standrewslogo.png  used on input line 80.
+Package pdftex.def Info: images/standrewslogo.png  used on input line 82.
 (pdftex.def)             Requested size: 88.2037pt x 107.56636pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/standrewslogo.png
 >]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
 <images/colourful.jpg, id=16, 1027.84pt x 770.88pt>
 File: images/colourful.jpg Graphic file (type jpg)
 <use images/colourful.jpg>
-Package pdftex.def Info: images/colourful.jpg  used on input line 97.
+Package pdftex.def Info: images/colourful.jpg  used on input line 99.
 (pdftex.def)             Requested size: 390.0pt x 292.50223pt.
 <images/drawing.png, id=17, 778.545pt x 552.975pt>
 File: images/drawing.png Graphic file (type png)
 <use images/drawing.png>
-Package pdftex.def Info: images/drawing.png  used on input line 103.
+Package pdftex.def Info: images/drawing.png  used on input line 105.
 (pdftex.def)             Requested size: 390.0pt x 277.00153pt.
 <images/simple.jpg, id=18, 1027.84pt x 770.88pt>
 File: images/simple.jpg Graphic file (type jpg)
 <use images/simple.jpg>
-Package pdftex.def Info: images/simple.jpg  used on input line 109.
+Package pdftex.def Info: images/simple.jpg  used on input line 111.
 (pdftex.def)             Requested size: 390.0pt x 292.50223pt.
  [1 <./images/colourful.jpg>] [2 <./images/drawing.png>] [3 <./images/simple.jp
 g>]
 <images/task1/colourfulr.png, id=31, 918.3108pt x 646.5756pt>
 File: images/task1/colourfulr.png Graphic file (type png)
 <use images/task1/colourfulr.png>
-Package pdftex.def Info: images/task1/colourfulr.png  used on input line 124.
+Package pdftex.def Info: images/task1/colourfulr.png  used on input line 128.
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
 <images/task1/colourfulg.png, id=32, 918.3108pt x 646.5756pt>
 File: images/task1/colourfulg.png Graphic file (type png)
 <use images/task1/colourfulg.png>
-Package pdftex.def Info: images/task1/colourfulg.png  used on input line 130.
+Package pdftex.def Info: images/task1/colourfulg.png  used on input line 134.
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <images/task1/colourfulb.png, id=33, 918.3108pt x 646.5756pt>
 File: images/task1/colourfulb.png Graphic file (type png)
 <use images/task1/colourfulb.png>
-Package pdftex.def Info: images/task1/colourfulb.png  used on input line 136.
+Package pdftex.def Info: images/task1/colourfulb.png  used on input line 140.
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <images/task1/simpler.png, id=34, 911.0838pt x 646.5756pt>
 File: images/task1/simpler.png Graphic file (type png)
 <use images/task1/simpler.png>
-Package pdftex.def Info: images/task1/simpler.png  used on input line 144.
+Package pdftex.def Info: images/task1/simpler.png  used on input line 148.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <images/task1/simpleg.png, id=35, 903.375pt x 646.5756pt>
 File: images/task1/simpleg.png Graphic file (type png)
 <use images/task1/simpleg.png>
-Package pdftex.def Info: images/task1/simpleg.png  used on input line 150.
+Package pdftex.def Info: images/task1/simpleg.png  used on input line 154.
 (pdftex.def)             Requested size: 390.0pt x 279.13693pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <images/task1/simpleb.png, id=36, 911.0838pt x 646.5756pt>
 File: images/task1/simpleb.png Graphic file (type png)
 <use images/task1/simpleb.png>
-Package pdftex.def Info: images/task1/simpleb.png  used on input line 156.
+Package pdftex.def Info: images/task1/simpleb.png  used on input line 160.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4
+ [4
 
  <./images/task1/colourfulr.png (PNG copy)>]
 <images/task1/drawingr.png, id=40, 675.4836pt x 448.5558pt>
 File: images/task1/drawingr.png Graphic file (type png)
 <use images/task1/drawingr.png>
-Package pdftex.def Info: images/task1/drawingr.png  used on input line 164.
+Package pdftex.def Info: images/task1/drawingr.png  used on input line 168.
 (pdftex.def)             Requested size: 390.0pt x 258.97845pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <images/task1/drawingg.png, id=41, 667.7748pt x 448.5558pt>
 File: images/task1/drawingg.png Graphic file (type png)
 <use images/task1/drawingg.png>
-Package pdftex.def Info: images/task1/drawingg.png  used on input line 170.
+Package pdftex.def Info: images/task1/drawingg.png  used on input line 174.
 (pdftex.def)             Requested size: 390.0pt x 261.9763pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <images/task1/drawingb.png, id=42, 675.4836pt x 448.5558pt>
 File: images/task1/drawingb.png Graphic file (type png)
 <use images/task1/drawingb.png>
-Package pdftex.def Info: images/task1/drawingb.png  used on input line 176.
+Package pdftex.def Info: images/task1/drawingb.png  used on input line 180.
 (pdftex.def)             Requested size: 390.0pt x 258.97845pt.
+ [5 <./images/task1/colourfulg.png (PNG copy)>]
+[6 <./images/task1/colourfulb.png (PNG copy)>] [7 <./images/task1/simpler.png (
+PNG copy)>] [8 <./images/task1/simpleg.png (PNG copy)>] [9 <./images/task1/simp
+leb.png (PNG copy)>] [10 <./images/task1/drawingr.png (PNG copy)>] [11 <./image
+s/task1/drawingg.png (PNG copy)>] [12 <./images/task1/drawingb.png (PNG copy)>]
+<images/gibbs.pdf, id=69, 602.30986pt x 233.27382pt>
+File: images/gibbs.pdf Graphic file (type pdf)
+<use images/gibbs.pdf>
+Package pdftex.def Info: images/gibbs.pdf  used on input line 210.
+(pdftex.def)             Requested size: 390.0pt x 151.0531pt.
+[13
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package natbib Warning: Citation `jpegformatspec' on page 5 undefined on input 
-line 184.
-
-[5 <./images/task1/colourfulg.png (PNG copy)>]
-
-Package natbib Warning: Citation `helmberg_1994' on page 6 undefined on input l
-ine 202.
-
-
-Package natbib Warning: Citation `matlabrgb2ycbcr' on page 6 undefined on input
- line 202.
-
-[6 <./images/task1/colourfulb.png (PNG copy)>]
-
-LaTeX Warning: File `images/gibbs.pdf' not found on input line 205.
-
-
-! Package pdftex.def Error: File `images/gibbs.pdf' not found: using draft sett
-ing.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.205 ...phics[width=\linewidth]{images/gibbs.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package natbib Warning: Citation `gibbs' on page 7 undefined on input line 206.
-
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7 <./images/task1/simpler.png (PNG copy)>]
-<images/task2/colourfulcustom.png, id=55, 421.575pt x 316.0608pt>
+]
+<images/task2/colourfulcustom.png, id=75, 421.575pt x 316.0608pt>
 File: images/task2/colourfulcustom.png Graphic file (type png)
 <use images/task2/colourfulcustom.png>
 Package pdftex.def Info: images/task2/colourfulcustom.png  used on input line 2
-13.
+18.
 (pdftex.def)             Requested size: 390.0pt x 292.39507pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task2/drawingcustom.png, id=56, 429.2838pt x 316.0608pt>
+<images/task2/drawingcustom.png, id=76, 429.2838pt x 316.0608pt>
 File: images/task2/drawingcustom.png Graphic file (type png)
 <use images/task2/drawingcustom.png>
-Package pdftex.def Info: images/task2/drawingcustom.png  used on input line 219
+Package pdftex.def Info: images/task2/drawingcustom.png  used on input line 224
 .
 (pdftex.def)             Requested size: 390.0pt x 287.13834pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task2/simplecustom.png, id=57, 429.2838pt x 316.0608pt>
+<images/task2/simplecustom.png, id=77, 429.2838pt x 316.0608pt>
 File: images/task2/simplecustom.png Graphic file (type png)
 <use images/task2/simplecustom.png>
-Package pdftex.def Info: images/task2/simplecustom.png  used on input line 225.
+Package pdftex.def Info: images/task2/simplecustom.png  used on input line 230.
 
 (pdftex.def)             Requested size: 390.0pt x 287.13834pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task2/colourfuly.png, id=58, 918.3108pt x 646.5756pt>
+<images/task2/colourfuly.png, id=78, 918.3108pt x 646.5756pt>
 File: images/task2/colourfuly.png Graphic file (type png)
 <use images/task2/colourfuly.png>
-Package pdftex.def Info: images/task2/colourfuly.png  used on input line 235.
+Package pdftex.def Info: images/task2/colourfuly.png  used on input line 240.
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task2/colourfulcb.png, id=59, 911.0838pt x 646.5756pt>
+<images/task2/colourfulcb.png, id=79, 911.0838pt x 646.5756pt>
 File: images/task2/colourfulcb.png Graphic file (type png)
 <use images/task2/colourfulcb.png>
-Package pdftex.def Info: images/task2/colourfulcb.png  used on input line 241.
+Package pdftex.def Info: images/task2/colourfulcb.png  used on input line 246.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task2/colourfulcr.png, id=60, 911.0838pt x 646.5756pt>
+<images/task2/colourfulcr.png, id=80, 911.0838pt x 646.5756pt>
 File: images/task2/colourfulcr.png Graphic file (type png)
 <use images/task2/colourfulcr.png>
-Package pdftex.def Info: images/task2/colourfulcr.png  used on input line 247.
+Package pdftex.def Info: images/task2/colourfulcr.png  used on input line 252.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task2/drawingy.png, id=61, 675.4836pt x 448.5558pt>
+<images/task2/drawingy.png, id=81, 675.4836pt x 448.5558pt>
 File: images/task2/drawingy.png Graphic file (type png)
 <use images/task2/drawingy.png>
-Package pdftex.def Info: images/task2/drawingy.png  used on input line 253.
+Package pdftex.def Info: images/task2/drawingy.png  used on input line 258.
 (pdftex.def)             Requested size: 390.0pt x 258.97845pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task2/drawingcb.png, id=62, 675.4836pt x 448.5558pt>
+<images/task2/drawingcb.png, id=82, 675.4836pt x 448.5558pt>
 File: images/task2/drawingcb.png Graphic file (type png)
 <use images/task2/drawingcb.png>
-Package pdftex.def Info: images/task2/drawingcb.png  used on input line 259.
+Package pdftex.def Info: images/task2/drawingcb.png  used on input line 264.
 (pdftex.def)             Requested size: 390.0pt x 258.97845pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task2/drawingcr.png, id=63, 682.7106pt x 448.5558pt>
+<images/task2/drawingcr.png, id=83, 682.7106pt x 448.5558pt>
 File: images/task2/drawingcr.png Graphic file (type png)
 <use images/task2/drawingcr.png>
-Package pdftex.def Info: images/task2/drawingcr.png  used on input line 265.
+Package pdftex.def Info: images/task2/drawingcr.png  used on input line 270.
 (pdftex.def)             Requested size: 390.0pt x 256.24069pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task2/simpley.png, id=64, 918.3108pt x 646.5756pt>
+<images/task2/simpley.png, id=84, 918.3108pt x 646.5756pt>
 File: images/task2/simpley.png Graphic file (type png)
 <use images/task2/simpley.png>
-Package pdftex.def Info: images/task2/simpley.png  used on input line 271.
+Package pdftex.def Info: images/task2/simpley.png  used on input line 276.
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task2/simplecb.png, id=65, 918.3108pt x 646.5756pt>
+<images/task2/simplecb.png, id=85, 918.3108pt x 646.5756pt>
 File: images/task2/simplecb.png Graphic file (type png)
 <use images/task2/simplecb.png>
-Package pdftex.def Info: images/task2/simplecb.png  used on input line 277.
+Package pdftex.def Info: images/task2/simplecb.png  used on input line 282.
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task2/simplecr.png, id=66, 911.0838pt x 646.5756pt>
+<images/task2/simplecr.png, id=86, 911.0838pt x 646.5756pt>
 File: images/task2/simplecr.png Graphic file (type png)
 <use images/task2/simplecr.png>
-Package pdftex.def Info: images/task2/simplecr.png  used on input line 283.
+Package pdftex.def Info: images/task2/simplecr.png  used on input line 288.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[8 <./images/task1/simpleg.png (PNG copy)>] [9 <./images/task1/simpleb.png (PNG
- copy)>]
-
-LaTeX Warning: Reference `fig:colorfulsub' on page 10 undefined on input line 3
-02.
-
-
-LaTeX Warning: Reference `colorfulsub' on page 10 undefined on input line 304.
-
-[10 <./images/task1/drawingr.png (PNG copy)>]
-<images/task3/colourfulsub.png, id=76, 918.3108pt x 646.5756pt>
+ [14 <./images/gibbs.pdf>] [15 <./images/task2/colourfulcustom.png (PNG copy)>]
+ [16 <./images/task2/drawingcustom.png (PNG copy)>] [17 <./images/task2/simplec
+ustom.png (PNG copy)>] [18 <./images/task2/colourfuly.png (PNG copy)>]
+[19 <./images/task2/colourfulcb.png (PNG copy)>] [20 <./images/task2/colourfulc
+r.png (PNG copy)>] [21 <./images/task2/drawingy.png (PNG copy)>] [22 <./images/
+task2/drawingcb.png (PNG copy)>] [23 <./images/task2/drawingcr.png (PNG copy)>]
+[24 <./images/task2/simpley.png (PNG copy)>] [25 <./images/task2/simplecb.png (
+PNG copy)>] [26 <./images/task2/simplecr.png (PNG copy)>]
+<images/task3/colourfulsub.png, id=130, 918.3108pt x 646.5756pt>
 File: images/task3/colourfulsub.png Graphic file (type png)
 <use images/task3/colourfulsub.png>
-Package pdftex.def Info: images/task3/colourfulsub.png  used on input line 307.
+Package pdftex.def Info: images/task3/colourfulsub.png  used on input line 314.
 
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/colourfuly.png, id=77, 911.0838pt x 646.5756pt>
+<images/task3/colourfuly.png, id=131, 911.0838pt x 646.5756pt>
 File: images/task3/colourfuly.png Graphic file (type png)
 <use images/task3/colourfuly.png>
-Package pdftex.def Info: images/task3/colourfuly.png  used on input line 313.
+Package pdftex.def Info: images/task3/colourfuly.png  used on input line 320.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/colourfulcb.png, id=78, 918.3108pt x 646.5756pt>
+<images/task3/colourfulcb.png, id=132, 918.3108pt x 646.5756pt>
 File: images/task3/colourfulcb.png Graphic file (type png)
 <use images/task3/colourfulcb.png>
-Package pdftex.def Info: images/task3/colourfulcb.png  used on input line 319.
+Package pdftex.def Info: images/task3/colourfulcb.png  used on input line 326.
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/colourfulcr.png, id=79, 911.0838pt x 646.5756pt>
+<images/task3/colourfulcr.png, id=133, 911.0838pt x 646.5756pt>
 File: images/task3/colourfulcr.png Graphic file (type png)
 <use images/task3/colourfulcr.png>
-Package pdftex.def Info: images/task3/colourfulcr.png  used on input line 325.
+Package pdftex.def Info: images/task3/colourfulcr.png  used on input line 332.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: File `images/task3/colourfulff.png' not found on input line 331.
-
-
-
-! Package pdftex.def Error: File `images/task3/colourfulff.png' not found: usin
-g draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.331 ...\linewidth]{images/task3/colourfulff.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `fig:colorfulsub' on page 11 undefined on input line 3
-32.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/drawingsub.png, id=80, 670.1838pt x 448.074pt>
+<images/task3/colourfuldiff.png, id=134, 911.0838pt x 646.5756pt>
+File: images/task3/colourfuldiff.png Graphic file (type png)
+<use images/task3/colourfuldiff.png>
+Package pdftex.def Info: images/task3/colourfuldiff.png  used on input line 338
+.
+(pdftex.def)             Requested size: 390.0pt x 276.77898pt.
+<images/task3/drawingsub.png, id=135, 670.1838pt x 448.074pt>
 File: images/task3/drawingsub.png Graphic file (type png)
 <use images/task3/drawingsub.png>
-Package pdftex.def Info: images/task3/drawingsub.png  used on input line 339.
+Package pdftex.def Info: images/task3/drawingsub.png  used on input line 346.
 (pdftex.def)             Requested size: 390.0pt x 260.75139pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/drawingy.png, id=81, 670.1838pt x 448.074pt>
+<images/task3/drawingy.png, id=136, 670.1838pt x 448.074pt>
 File: images/task3/drawingy.png Graphic file (type png)
 <use images/task3/drawingy.png>
-Package pdftex.def Info: images/task3/drawingy.png  used on input line 345.
+Package pdftex.def Info: images/task3/drawingy.png  used on input line 352.
 (pdftex.def)             Requested size: 390.0pt x 260.75139pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/drawingcb.png, id=82, 677.4108pt x 448.074pt>
+<images/task3/drawingcb.png, id=137, 677.4108pt x 448.074pt>
 File: images/task3/drawingcb.png Graphic file (type png)
 <use images/task3/drawingcb.png>
-Package pdftex.def Info: images/task3/drawingcb.png  used on input line 351.
+Package pdftex.def Info: images/task3/drawingcb.png  used on input line 358.
 (pdftex.def)             Requested size: 390.0pt x 257.96188pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/drawingcr.png, id=83, 670.1838pt x 448.074pt>
+<images/task3/drawingcr.png, id=138, 670.1838pt x 448.074pt>
 File: images/task3/drawingcr.png Graphic file (type png)
 <use images/task3/drawingcr.png>
-Package pdftex.def Info: images/task3/drawingcr.png  used on input line 357.
+Package pdftex.def Info: images/task3/drawingcr.png  used on input line 364.
 (pdftex.def)             Requested size: 390.0pt x 260.75139pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/drawingdiff.png, id=84, 670.1838pt x 448.074pt>
+<images/task3/drawingdiff.png, id=139, 670.1838pt x 448.074pt>
 File: images/task3/drawingdiff.png Graphic file (type png)
 <use images/task3/drawingdiff.png>
-Package pdftex.def Info: images/task3/drawingdiff.png  used on input line 363.
+Package pdftex.def Info: images/task3/drawingdiff.png  used on input line 370.
 (pdftex.def)             Requested size: 390.0pt x 260.75139pt.
+ [27
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/simplesub.png, id=85, 911.0838pt x 646.5756pt>
+]
+<images/task3/simplesub.png, id=143, 911.0838pt x 646.5756pt>
 File: images/task3/simplesub.png Graphic file (type png)
 <use images/task3/simplesub.png>
-Package pdftex.def Info: images/task3/simplesub.png  used on input line 371.
+Package pdftex.def Info: images/task3/simplesub.png  used on input line 378.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/simpley.png, id=86, 918.3108pt x 646.5756pt>
+<images/task3/simpley.png, id=144, 918.3108pt x 646.5756pt>
 File: images/task3/simpley.png Graphic file (type png)
 <use images/task3/simpley.png>
-Package pdftex.def Info: images/task3/simpley.png  used on input line 377.
+Package pdftex.def Info: images/task3/simpley.png  used on input line 384.
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/simplecb.png, id=87, 911.0838pt x 646.5756pt>
+<images/task3/simplecb.png, id=145, 911.0838pt x 646.5756pt>
 File: images/task3/simplecb.png Graphic file (type png)
 <use images/task3/simplecb.png>
-Package pdftex.def Info: images/task3/simplecb.png  used on input line 383.
+Package pdftex.def Info: images/task3/simplecb.png  used on input line 390.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/simplecr.png, id=88, 918.3108pt x 646.5756pt>
+<images/task3/simplecr.png, id=146, 918.3108pt x 646.5756pt>
 File: images/task3/simplecr.png Graphic file (type png)
 <use images/task3/simplecr.png>
-Package pdftex.def Info: images/task3/simplecr.png  used on input line 389.
+Package pdftex.def Info: images/task3/simplecr.png  used on input line 396.
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task3/simplediff.png, id=89, 911.0838pt x 646.5756pt>
+<images/task3/simplediff.png, id=147, 911.0838pt x 646.5756pt>
 File: images/task3/simplediff.png Graphic file (type png)
 <use images/task3/simplediff.png>
-Package pdftex.def Info: images/task3/simplediff.png  used on input line 395.
+Package pdftex.def Info: images/task3/simplediff.png  used on input line 402.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[11 <./images/task1/drawingg.png (PNG copy)>]
-<images/task4/colourfuly.png, id=93, 911.0838pt x 646.5756pt>
+ [28 <./images/task3/colourfulsub.png (PNG copy)>] [29 <./images/task3/colourfu
+ly.png (PNG copy)>] [30 <./images/task3/colourfulcb.png (PNG copy)>] [31 <./ima
+ges/task3/colourfulcr.png (PNG copy)>] [32 <./images/task3/colourfuldiff.png (P
+NG copy)>]
+[33 <./images/task3/drawingsub.png (PNG copy)>] [34 <./images/task3/drawingy.pn
+g (PNG copy)>] [35 <./images/task3/drawingcb.png (PNG copy)>] [36 <./images/tas
+k3/drawingcr.png (PNG copy)>] [37 <./images/task3/drawingdiff.png (PNG copy)>]
+[38 <./images/task3/simplesub.png (PNG copy)>] [39 <./images/task3/simpley.png 
+(PNG copy)>] [40 <./images/task3/simplecb.png (PNG copy)>] [41 <./images/task3/
+simplecr.png (PNG copy)>] [42 <./images/task3/simplediff.png (PNG copy)>]
+<images/task4/colourfuly.png, id=196, 911.0838pt x 646.5756pt>
 File: images/task4/colourfuly.png Graphic file (type png)
 <use images/task4/colourfuly.png>
-Package pdftex.def Info: images/task4/colourfuly.png  used on input line 407.
+Package pdftex.def Info: images/task4/colourfuly.png  used on input line 416.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
- [12 <./images/task1/drawingb.png (PNG copy)>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/colourfulcb.png, id=98, 911.0838pt x 646.5756pt>
+<images/task4/colourfulcb.png, id=197, 911.0838pt x 646.5756pt>
 File: images/task4/colourfulcb.png Graphic file (type png)
 <use images/task4/colourfulcb.png>
-Package pdftex.def Info: images/task4/colourfulcb.png  used on input line 413.
+Package pdftex.def Info: images/task4/colourfulcb.png  used on input line 422.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/colourfulcr.png, id=99, 918.3108pt x 646.5756pt>
+<images/task4/colourfulcr.png, id=198, 918.3108pt x 646.5756pt>
 File: images/task4/colourfulcr.png Graphic file (type png)
 <use images/task4/colourfulcr.png>
-Package pdftex.def Info: images/task4/colourfulcr.png  used on input line 419.
+Package pdftex.def Info: images/task4/colourfulcr.png  used on input line 428.
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/colourfullf.png, id=100, 911.0838pt x 646.5756pt>
+<images/task4/colourfullf.png, id=199, 911.0838pt x 646.5756pt>
 File: images/task4/colourfullf.png Graphic file (type png)
 <use images/task4/colourfullf.png>
-Package pdftex.def Info: images/task4/colourfullf.png  used on input line 425.
+Package pdftex.def Info: images/task4/colourfullf.png  used on input line 434.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/colourfulhf.png, id=101, 911.0838pt x 646.5756pt>
+<images/task4/colourfulhf.png, id=200, 911.0838pt x 646.5756pt>
 File: images/task4/colourfulhf.png Graphic file (type png)
 <use images/task4/colourfulhf.png>
-Package pdftex.def Info: images/task4/colourfulhf.png  used on input line 431.
+Package pdftex.def Info: images/task4/colourfulhf.png  used on input line 440.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/drawingy.png, id=102, 675.4836pt x 448.5558pt>
+<images/task4/drawingy.png, id=201, 675.4836pt x 448.5558pt>
 File: images/task4/drawingy.png Graphic file (type png)
 <use images/task4/drawingy.png>
-Package pdftex.def Info: images/task4/drawingy.png  used on input line 441.
+Package pdftex.def Info: images/task4/drawingy.png  used on input line 450.
 (pdftex.def)             Requested size: 390.0pt x 258.97845pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+[43
 
-<images/task4/drawingcb.png, id=103, 675.4836pt x 448.5558pt>
+]
+<images/task4/drawingcb.png, id=205, 675.4836pt x 448.5558pt>
 File: images/task4/drawingcb.png Graphic file (type png)
 <use images/task4/drawingcb.png>
-Package pdftex.def Info: images/task4/drawingcb.png  used on input line 447.
+Package pdftex.def Info: images/task4/drawingcb.png  used on input line 456.
 (pdftex.def)             Requested size: 390.0pt x 258.97845pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/drawingcr.png, id=104, 682.7106pt x 448.5558pt>
+<images/task4/drawingcr.png, id=206, 682.7106pt x 448.5558pt>
 File: images/task4/drawingcr.png Graphic file (type png)
 <use images/task4/drawingcr.png>
-Package pdftex.def Info: images/task4/drawingcr.png  used on input line 453.
+Package pdftex.def Info: images/task4/drawingcr.png  used on input line 462.
 (pdftex.def)             Requested size: 390.0pt x 256.24069pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/drawinglf.png, id=105, 675.4836pt x 448.5558pt>
+<images/task4/drawinglf.png, id=207, 675.4836pt x 448.5558pt>
 File: images/task4/drawinglf.png Graphic file (type png)
 <use images/task4/drawinglf.png>
-Package pdftex.def Info: images/task4/drawinglf.png  used on input line 459.
+Package pdftex.def Info: images/task4/drawinglf.png  used on input line 468.
 (pdftex.def)             Requested size: 390.0pt x 258.97845pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/drawinghf.png, id=106, 675.4836pt x 448.5558pt>
+<images/task4/drawinghf.png, id=208, 675.4836pt x 448.5558pt>
 File: images/task4/drawinghf.png Graphic file (type png)
 <use images/task4/drawinghf.png>
-Package pdftex.def Info: images/task4/drawinghf.png  used on input line 465.
+Package pdftex.def Info: images/task4/drawinghf.png  used on input line 474.
 (pdftex.def)             Requested size: 390.0pt x 258.97845pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/simpley.png, id=107, 918.3108pt x 646.5756pt>
+<images/task4/simpley.png, id=209, 918.3108pt x 646.5756pt>
 File: images/task4/simpley.png Graphic file (type png)
 <use images/task4/simpley.png>
-Package pdftex.def Info: images/task4/simpley.png  used on input line 473.
+Package pdftex.def Info: images/task4/simpley.png  used on input line 482.
 (pdftex.def)             Requested size: 390.0pt x 274.5986pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/simplecb.png, id=108, 911.0838pt x 646.5756pt>
+<images/task4/simplecb.png, id=210, 911.0838pt x 646.5756pt>
 File: images/task4/simplecb.png Graphic file (type png)
 <use images/task4/simplecb.png>
-Package pdftex.def Info: images/task4/simplecb.png  used on input line 479.
+Package pdftex.def Info: images/task4/simplecb.png  used on input line 488.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/simplecr.png, id=109, 911.0838pt x 646.5756pt>
+<images/task4/simplecr.png, id=211, 911.0838pt x 646.5756pt>
 File: images/task4/simplecr.png Graphic file (type png)
 <use images/task4/simplecr.png>
-Package pdftex.def Info: images/task4/simplecr.png  used on input line 485.
+Package pdftex.def Info: images/task4/simplecr.png  used on input line 494.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/simplelf.png, id=110, 911.0838pt x 646.5756pt>
+<images/task4/simplelf.png, id=212, 911.0838pt x 646.5756pt>
 File: images/task4/simplelf.png Graphic file (type png)
 <use images/task4/simplelf.png>
-Package pdftex.def Info: images/task4/simplelf.png  used on input line 491.
+Package pdftex.def Info: images/task4/simplelf.png  used on input line 500.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/task4/simplehf.png, id=111, 911.0838pt x 646.5756pt>
+<images/task4/simplehf.png, id=213, 911.0838pt x 646.5756pt>
 File: images/task4/simplehf.png Graphic file (type png)
 <use images/task4/simplehf.png>
-Package pdftex.def Info: images/task4/simplehf.png  used on input line 497.
+Package pdftex.def Info: images/task4/simplehf.png  used on input line 506.
 (pdftex.def)             Requested size: 390.0pt x 276.77898pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13] (./report.bbl
-Underfull \hbox (badness 1147) in paragraph at lines 4--7
+ [44 <./images/task4/colourfuly.png (PNG copy)>] [45 <./images/task4/colourfulc
+b.png (PNG copy)>] [46 <./images/task4/colourfulcr.png (PNG copy)>]
+[47 <./images/task4/colourfullf.png (PNG copy)>] [48 <./images/task4/colourfulh
+f.png (PNG copy)>] [49 <./images/task4/drawingy.png (PNG copy)>] [50 <./images/
+task4/drawingcb.png (PNG copy)>] [51 <./images/task4/drawingcr.png (PNG copy)>]
+[52 <./images/task4/drawinglf.png (PNG copy)>] [53 <./images/task4/drawinghf.pn
+g (PNG copy)>] [54 <./images/task4/simpley.png (PNG copy)>] [55 <./images/task4
+/simplecb.png (PNG copy)>] [56 <./images/task4/simplecr.png (PNG copy)>]
+[57 <./images/task4/simplelf.png (PNG copy)>] [58 <./images/task4/simplehf.png 
+(PNG copy)>] (./report.bbl
+Underfull \hbox (badness 1147) in paragraph at lines 15--18
 []\OT1/cmr/m/n/12 Matlab doc-u-men-ta-tion.  $\OT1/cmtt/m/n/12 https : / / uk .
- mathworks . com / help / matlab /
+ mathworks . com / help / images /
  []
 
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
+Underfull \hbox (badness 1552) in paragraph at lines 20--23
+\OT1/cmr/m/n/12 har-mon-ics.  $\OT1/cmtt/m/n/12 https : / / commons . wikimedia
+ . org / w / index . php ? curid =
+ []
 
-Package natbib Warning: There were undefined citations.
+) [59
 
-[14] [15] [16 <./images/task2/colourfulcustom.png (PNG copy)>] [17 <./images/ta
-sk2/drawingcustom.png (PNG copy)>] [18 <./images/task2/simplecustom.png (PNG co
-py)>] [19 <./images/task2/colourfuly.png (PNG copy)>] [20 <./images/task2/colou
-rfulcb.png (PNG copy)>] [21 <./images/task2/colourfulcr.png (PNG copy)>]
-[22 <./images/task2/drawingy.png (PNG copy)>] [23 <./images/task2/drawingcb.png
- (PNG copy)>] [24 <./images/task2/drawingcr.png (PNG copy)>] [25 <./images/task
-2/simpley.png (PNG copy)>] [26 <./images/task2/simplecb.png (PNG copy)>]
-[27 <./images/task2/simplecr.png (PNG copy)>] [28 <./images/task3/colourfulsub.
-png (PNG copy)>] [29 <./images/task3/colourfuly.png (PNG copy)>] [30 <./images/
-task3/colourfulcb.png (PNG copy)>] [31 <./images/task3/colourfulcr.png (PNG cop
-y)>] [32] [33 <./images/task3/drawingsub.png (PNG copy)>] [34 <./images/task3/d
-rawingy.png (PNG copy)>] [35 <./images/task3/drawingcb.png (PNG copy)>]
-[36 <./images/task3/drawingcr.png (PNG copy)>] [37 <./images/task3/drawingdiff.
-png (PNG copy)>] [38 <./images/task3/simplesub.png (PNG copy)>] [39 <./images/t
-ask3/simpley.png (PNG copy)>] [40 <./images/task3/simplecb.png (PNG copy)>]
-[41 <./images/task3/simplecr.png (PNG copy)>] [42 <./images/task3/simplediff.pn
-g (PNG copy)>] [43 <./images/task4/colourfuly.png (PNG copy)>] [44 <./images/ta
-sk4/colourfulcb.png (PNG copy)>] [45 <./images/task4/colourfulcr.png (PNG copy)
->] [46 <./images/task4/colourfullf.png (PNG copy)>] [47 <./images/task4/colourf
-ulhf.png (PNG copy)>] [48 <./images/task4/drawingy.png (PNG copy)>] [49 <./imag
-es/task4/drawingcb.png (PNG copy)>] [50 <./images/task4/drawingcr.png (PNG copy
-)>] [51 <./images/task4/drawinglf.png (PNG copy)>] [52 <./images/task4/drawingh
-f.png (PNG copy)>] [53 <./images/task4/simpley.png (PNG copy)>] [54 <./images/t
-ask4/simplecb.png (PNG copy)>] [55 <./images/task4/simplecr.png (PNG copy)>]
-[56 <./images/task4/simplelf.png (PNG copy)>] [57 <./images/task4/simplehf.png 
-(PNG copy)>] (./report.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 15579 strings out of 494880
- 296395 string characters out of 6179601
- 353756 words of memory out of 5000000
- 18551 multiletter control sequences out of 15000+600000
- 11161 words of font info for 40 fonts, out of 8000000 for 9000
+ 16093 strings out of 494880
+ 302027 string characters out of 6179601
+ 344873 words of memory out of 5000000
+ 19058 multiletter control sequences out of 15000+600000
+ 10854 words of font info for 39 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,14n,56p,945b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (58 pages, 21360582 bytes).
+ 62i,14n,56p,945b,604s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (60 pages, 22818891 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
- 161 compressed objects within 2 object streams
+ 298 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 283 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -29,6 +29,8 @@
 \usepackage{color}
 \usepackage[explicit]{titlesec}
 \usepackage{url}
+\usepackage[section]{placeins}
+
 
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -93,7 +95,7 @@ The goal of this practical was to learn and apply image processing techniques us
 
 The scripts are separated by task given in the practical specification. Where useful, scripts were created to hold functions that were used repeatedly. To run each practical task in order, the script \emph{practical.m} can be used (This will generate a large number of figures). The images for processing are shown in figures \ref{fig:colorful}, \ref{fig:drawing}, and \ref{fig:simple}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/colourful.jpg}
   \caption{Image with large variation in colour and spatial frequency.}
   \label{fig:colorful}
@@ -113,6 +115,8 @@ The scripts are separated by task given in the practical specification. Where us
 
 \vfill
 \clearpage
+\FloatBarrier
+
 
 \section{RGB}
 
@@ -120,19 +124,19 @@ For task 1, the function \emph{showRGB.m} was created. After reading the files u
 
 Figure \ref{fig:colorful} was filtered into figures \ref{fig:colourfulred}, \ref{fig:colourfulgreen}, and \ref{fig:colourfulblue}. Lanterns in the image that are most saturated are replaced with black in all other colour filtered images. For example, the blue lanterns roughly in the centre of the blue channel image are not visible in the red channel image. Since white is composed of all three colours, the white circles in the centre of the blue lanterns is still visible in each image. A similar effect can be seen in each of the other images. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task1/colourfulr.png}
   \caption{Red component of Figure \ref{fig:colorful}.}
   \label{fig:colourfulred}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task1/colourfulg.png}
   \caption{Green component of Figure \ref{fig:colorful}.}
   \label{fig:colourfulgreen}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task1/colourfulb.png}
   \caption{Blue component of Figure \ref{fig:colorful}.}
   \label{fig:colourfulblue}
@@ -140,19 +144,19 @@ Figure \ref{fig:colorful} was filtered into figures \ref{fig:colourfulred}, \ref
 
 Figure \ref{fig:simple} was filtered into figures \ref{fig:simplered}, \ref{fig:simplegreen}, and \ref{fig:simpleblue}. Since the image is mostly white, there is very little difference in the three channels.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task1/simpler.png}
   \caption{Red component of Figure \ref{fig:simple}.}
   \label{fig:simplered}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task1/simpleg.png}
   \caption{Green component of Figure \ref{fig:simple}.}
   \label{fig:simplegreen}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task1/simpleb.png}
   \caption{Blue component of Figure \ref{fig:simple}.}
   \label{fig:simpleblue}
@@ -160,23 +164,24 @@ Figure \ref{fig:simple} was filtered into figures \ref{fig:simplered}, \ref{fig:
 
 Figure \ref{fig:drawingblue} was filtered into figures \ref{fig:drawingred}, \ref{fig:drawinggreen}, and \ref{fig:drawingblue}. The rasterized vector image has the most obvious differences compared to the original image. The values of 0 are used for all three channels for the originally transparent background, and so the black text is lost. In the red image (Figure \ref{fig:drawingred}), the blue pentagon is lost. The varying shades of pink in the image appear to be the result of increasing the brightness (the 8-bit value) of the red and blue channels, especially the red.  The square with the colour gradient applied appears a solid colour in the red and blue channels, showing that the green and blue channels are used to produce the white corners.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task1/drawingr.png}
   \caption{Red component of Figure \ref{fig:drawing}.}
   \label{fig:drawingred}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task1/drawingg.png}
   \caption{Green component of Figure \ref{fig:drawing}.}
   \label{fig:drawinggreen}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task1/drawingb.png}
   \caption{Blue component of Figure \ref{fig:drawing}.}
   \label{fig:drawingblue}
 \end{figure}
+\FloatBarrier
 
 \section{YCbCr}
 
@@ -201,7 +206,7 @@ The equations for the translation between the two colour spaces are shown in equ
 
 Often when transmitted, YCbCr encoders will instead use the range of 16 to 235 for analogue television signals. This is used to combat Gibbs phenomenon \citep{helmberg_1994}, which is introduced to the signal after filtering. The effect of Gibbs phenomemon is shown in figure \ref{fig:gibbs}. The high frequency components visible at sharp transition points produce unwanted artifacts in the signal. This is likely also the reason for the metallic ringing sound from the previous practical when a band of frequencies were zeroed from after performing an FFT, and why more effective filters use a gradual reduction in magnitude. The footroom and headrooom supplied by these unused bits are sometimes also used to store metadata on more reliable signals. The Matlab documentation for \emph{rgb2ycbcr} states that it uses the analogue translation for YCbCr which includes footroom and headroom \cite{matlabrgb2ycbcr}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/gibbs.pdf}
   \caption{Gibbs Phenomenon when Approximating a Square Signal\cite{gibbs}.}
   \label{fig:gibbs}
@@ -209,19 +214,19 @@ Often when transmitted, YCbCr encoders will instead use the range of 16 to 235 f
 
 The custom implementations produced Figures \ref{fig:customYCbCrColourful}, \ref{fig:customYCbCrDrawing}, and \ref{fig:customYCbCrSimple}. The top left image for each figure is the result of \emph{imshow} on YCbCr values, where the YCbCr values are being incorrectly interpreted as RGB. In order to render the YCbCr components as RGB using \emph{imshow} correctly, all other layers except the one being considered had to be 'zeroed'. The zero value for the Y component (luminance) is actually 0, as this corresponds to no signal. However, for Cb and Cr (Chromatic blue and red, respectively), the value of 128 was used corresponds to no signal, as this represents black. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/colourfulcustom.png}
   \caption{Custom YCbCr translation of Figure \ref{fig:colorful}.}
   \label{fig:customYCbCrColourful}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/drawingcustom.png}
   \caption{Custom YCbCr translation of Figure \ref{fig:drawing}.}
   \label{fig:customYCbCrDrawing}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/simplecustom.png}
   \caption{Custom YCbCr translation of Figure \ref{fig:simple}.}
   \label{fig:customYCbCrSimple}
@@ -231,59 +236,61 @@ The inbuilt functions produced figures \ref{fig:colourfuly}-\ref{fig:simplecr}. 
 
 For the components of figure \ref{fig:colorful}, the lighter blue lanters in the centre appear to be composed of low Cr and high Cb values (given the green present in \ref{fig:colourfulcr} and saturated blue in \ref{fig:colourfulcb}). 
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/colourfuly.png}
   \caption{Luminance component of Figure \ref{fig:colorful}.}
   \label{fig:colourfuly}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/colourfulcb.png}
   \caption{Chromatic Blue component of Figure \ref{fig:colorful}.}
   \label{fig:colourfulcb}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/colourfulcr.png}
   \caption{Chromatic Red component of Figure \ref{fig:colorful}.}
   \label{fig:colourfulcr}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/drawingy.png}
   \caption{Luminance component of Figure \ref{fig:drawing}.}
   \label{fig:drawingy}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/drawingcb.png}
   \caption{Chromatic Blue component of Figure \ref{fig:drawing}.}
   \label{fig:drawingcb}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/drawingcr.png}
   \caption{Chromatic Red component of Figure \ref{fig:drawing}.}
   \label{fig:drawingcr}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/simpley.png}
   \caption{Luminance component of Figure \ref{fig:simple}.}
   \label{fig:simpley}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/simplecb.png}
   \caption{Chromatic Blue component of Figure \ref{fig:simple}.}
   \label{fig:simplecb}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task2/simplecr.png}
   \caption{Chromatic Red component of Figure \ref{fig:simple}.}
   \label{fig:simplecr}
 \end{figure}
+
+\FloatBarrier
 
 \section{Downsampling}
 
@@ -299,67 +306,67 @@ This task required reducing the number of chroma samples by 8 in both dimensions
 
 The values in each cell are replaced with the average to allow the image to be correctly rendered, but in transmission only one value per cell would need to be sent from the Cb and Cr channels. 
 
-The results are shown in figures \ref{fig:colorfulsub} to \ref{fig:simplediff}. Each resulting subsampled YCbCr image appears to have pink and green hues. Since these exist at the extremes of the YCbCr range of colours, it's likely these are due to incorrect conversions to RGB. Ignoring this, it is still possible to see the effects of subsampling.
+The results are shown in figures \ref{fig:colourfulsub} to \ref{fig:simplediff}. Each resulting subsampled YCbCr image appears to have pink and green hues. Since these exist at the extremes of the YCbCr range of colours, it's likely these are due to incorrect conversions to RGB. Ignoring this, it is still possible to see the effects of subsampling.
 
-In the subsampled images of figure \ref{fig:colorful}, the macroblocks are fairly visible along the edges of objects. Thin outlines of objects that existed in the middle of a cell are thickened due to the averaging of the cells. It is harder to notice shapes in the chromatic images as outlines are less well defined. The cell blocks are especially apparent when the difference between the original and subsampled image are shown (Figure \ref{colorfulsub}). On the other hand, the blue lantern at the bottom right with the pattern of circles does not appear to suffer from aliasing.
+In the subsampled images of figure \ref{fig:colorful}, the macroblocks are fairly visible along the edges of objects. Thin outlines of objects that existed in the middle of a cell are thickened due to the averaging of the cells. It is harder to notice shapes in the chromatic images as outlines are less well defined. The cell blocks are especially apparent when the difference between the original and subsampled image are shown (Figure \ref{fig:colourfulsub}). On the other hand, the blue lantern at the bottom right with the pattern of circles does not appear to suffer from aliasing.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/colourfulsub.png}
   \caption{Subsampled version of Figure \ref{fig:colorful}.}
   \label{fig:colourfulsub}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/colourfuly.png}
   \caption{Luminance component of Figure \ref{fig:colorful}.}
   \label{fig:colourfulsuby}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/colourfulcb.png}
   \caption{Chromatic Blue component of Figure \ref{fig:colorful}.}
   \label{fig:colourfulsubcb}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/colourfulcr.png}
   \caption{Chromatic Red component of Figure \ref{fig:colorful}.}
   \label{fig:colourfulsubcr}
 \end{figure}
 
-\begin{figure}[h]
-  \includegraphics[width=\linewidth]{images/task3/colourfulff.png}
-  \caption{Difference between Figure \ref{fig:colorful} and Figure \ref{fig:colorfulsub}.}
+\begin{figure}[ht]
+  \includegraphics[width=\linewidth]{images/task3/colourfuldiff.png}
+  \caption{Difference between Figure \ref{fig:colorful} and Figure \ref{fig:colourfulsub}.}
   \label{fig:colourfuldiff}
 \end{figure}
 
 In the subsampled image of the drawing, the effect of aliasing is far more apparent. The thin edges of objects have harsh muddy outlines due to the average of the two colours. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/drawingsub.png}
   \caption{Subsampled version of Figure \ref{fig:drawing}.}
   \label{fig:drawingsub}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/drawingy.png}
   \caption{Luminance component of Figure \ref{fig:drawing}.}
   \label{fig:drawingsuby}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/drawingcb.png}
   \caption{Chromatic Blue component of Figure \ref{fig:drawing}.}
   \label{fig:drawingsubcb}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/drawingcr.png}
   \caption{Chromatic Red component of Figure \ref{fig:drawing}.}
   \label{fig:drawingsubcr}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/drawingdiff.png}
   \caption{Difference between Figure \ref{fig:drawing} and Figure \ref{fig:drawingsub}.}
   \label{fig:drawingdiff}
@@ -367,35 +374,37 @@ In the subsampled image of the drawing, the effect of aliasing is far more appar
 
 The simple image was the least affected by downsampling. Since the Cb and Cr values were basically both ~128, the fine grained details remained, for example, the dogs fur or the falling snow. At the edges of the dog where a sudden contrast in luminance occurs, some aliasing can be seen.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/simplesub.png}
   \caption{Subsampled version of Figure \ref{fig:simple}.}
   \label{fig:simplesub}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/simpley.png}
   \caption{Luminance component of Figure \ref{fig:simple}.}
   \label{fig:simplesuby}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/simplecb.png}
   \caption{Chromatic Blue component of Figure \ref{fig:simple}.}
   \label{fig:simplesubcb}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/simplecr.png}
   \caption{Chromatic Red component of Figure \ref{fig:simple}.}
   \label{fig:simplesubcr}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task3/simplediff.png}
   \caption{Difference between Figure \ref{fig:simple} and Figure \ref{fig:simplesub}.}
   \label{fig:simplediff}
 \end{figure}
+
+\FloatBarrier
 
 \section{Discrete Cosine Transform}
 
@@ -403,103 +412,112 @@ The spatial frequency was plotted for each channel for each image seperately. Un
 
 For the DCT of figure \ref{fig:colorful}, each channel shows a large spread of spatial frequencies (Given the large amount of white even at the bottom-right corner of the figure). This is expected, as the image features constant changes in colour, straight and curved lines of varying lengths, and lots of different patterns. As an extension, the low and high frequency components were also isolated. In JPEG compression, the high frequency components would be removed using a similar approach. The plot of the low frequency image shows very little, likely due to the large amount of detail present in the image (though it is suspiciously too little detail, and may be due to error). On the other hand, the high spatial frequency plot contains enough detail to notice details from the orignal image.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/colourfuly.png}
   \caption{Spatial frequencies of Y Component of Figure \ref{fig:colorful}.}
   \label{fig:colorfulyspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/colourfulcb.png}
   \caption{Spatial frequencies of Cb Component of Figure \ref{fig:colorful}.}
   \label{fig:colorfulcbspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/colourfulcr.png}
   \caption{Spatial frequencies of Cr Component of Figure \ref{fig:colorful}.}
   \label{fig:colorfulcrspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/colourfullf.png}
   \caption{Low spatial frequencies of Y Component of Figure \ref{fig:colorful}.}
   \label{fig:colorfulylfspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/colourfulhf.png}
   \caption{High spatial frequencies of Y Component of Figure \ref{fig:colorful}.}
-  \label{fig:colorfulylfspatial}
+  \label{fig:colorfulyhfspatial}
 \end{figure}
 
 The DCT plots of the vector image show more focused frequencies. Most of the energy is focused in the top left, corresponding to low spatial frequency components. This is likely due to the abundance of long lines and no textures. The large triangle that is present in the DCT of all three channels is likely responsible for producing the curved and diagonal lines in the image, as it would require a gradual change in the coeffiecients used to move the maxima responsible for generating the lines. The Cr frequency image (Figure \ref{fig:drawingcrspatial}) shows more triangles than the Cb image (Figure \ref{fig:drawingcbspatial}), which would correspond to there being more shapes with exclusively red chromaticity than blue.
 
 The plot of the highpass filtered image supports this, as the curves are very clear. The lowpass image contains most of the image, due to the large amount of untextured blank space. However, the highpass image shows the curves very brightly. The ripples from the cosine waves that would be canceled out by the low frequency components are visible as streaks from each shape. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/drawingy.png}
   \caption{Spatial frequencies of Y Component of Figure \ref{fig:drawing}.}
   \label{fig:drawingyspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/drawingcb.png}
   \caption{Spatial frequencies of Cb Component of Figure \ref{fig:drawing}.}
   \label{fig:drawingcbspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/drawingcr.png}
   \caption{Spatial frequencies of Cr Component of Figure \ref{fig:drawing}.}
   \label{fig:drawingcrspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/drawinglf.png}
   \caption{Low spatial frequencies of Y Component of Figure \ref{fig:drawing}.}
   \label{fig:drawingylfspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/drawinghf.png}
   \caption{High spatial frequencies of Y Component of Figure \ref{fig:drawing}.}
-  \label{fig:drawingylfspatial}
+  \label{fig:drawingyhfspatial}
 \end{figure}
 
 For the simple image, the concentration of frequencies is almost completely in the low end. The lowpass image shows all white, whilst the high pass image shows the textures in the snow, the dogs coat, and the falling snowflakes. This image would be easily compressed compared to the others as it has the least high frequency components. The vector image could also be compressed without affecting the image quality too much, but aliasing would be present in the curves if overdone.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/simpley.png}
   \caption{Spatial frequencies of Y Component of Figure \ref{fig:simple}.}
   \label{fig:simpleyspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/simplecb.png}
   \caption{Spatial frequencies of Cb Component of Figure \ref{fig:simple}.}
   \label{fig:simplecbspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/simplecr.png}
   \caption{Spatial frequencies of Cr Component of Figure \ref{fig:simple}.}
   \label{fig:simplecrspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/simplelf.png}
   \caption{Low spatial frequencies of Y Component of Figure \ref{fig:simple}.}
   \label{fig:simpleylfspatial}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{images/task4/simplehf.png}
   \caption{High spatial frequencies of Y Component of Figure \ref{fig:simple}.}
-  \label{fig:simpleylfspatial}
+  \label{fig:simpleyhfspatial}
 \end{figure}
 
+\FloatBarrier
+
 \section{Video Analysis}
+
+In order to determine the heart rate of the person in the given video, the following steps were taken:
+
+\begin{enumerate}
+	\item 
+\end{enumerate}
+
 
 \part*{Conclusion}
 
