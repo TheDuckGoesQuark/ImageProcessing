@@ -1,7 +1,5 @@
 function [] = showYCbCr(filename, figureNumber)
-		% https://www.w3.org/Graphics/JPEG/jfif3.pdf
-		% Page 3
-
+		
 		% Read in image, 
 		X = readImageFile(filename);
 
@@ -16,12 +14,13 @@ function [] = showYCbCr(filename, figureNumber)
 		title(colorplot, "YCbCr Image")
 
 		% half intensity for all values in RGB
-		halfIntensityMatrix = 128 + zeros(size(X, 1), size(X,2));
+		zeroIntensityMatrix = zeros(size(X, 1), size(X, 2));
+		halfIntensityMatrix = 128 + zeroIntensityMatrix;
 
 		% Convert to RGB for rendering
 		yRGB = ycbcr2rgb(cat(3,y,halfIntensityMatrix, halfIntensityMatrix));
-		CbRGB = ycbcr2rgb(cat(3, halfIntensityMatrix, Cb, halfIntensityMatrix));
-		CrRGB = ycbcr2rgb(cat(3, halfIntensityMatrix, halfIntensityMatrix, Cr));
+		CbRGB = ycbcr2rgb(cat(3, zeroIntensityMatrix, Cb, halfIntensityMatrix));
+		CrRGB = ycbcr2rgb(cat(3, zeroIntensityMatrix, halfIntensityMatrix, Cr));
 
 		fig1 = figure(figureNumber+1);
 		luminancePlot = subplot(1,1,1);
@@ -39,7 +38,9 @@ function [] = showYCbCr(filename, figureNumber)
 		title(CrPlot, "Chromatic Red Components");
 
 		% Save figures to file
-		%saveas(fig1, strcat(filename, "y.png"));
-		%saveas(fig2, strcat(filename, "cb.png"));
-		%saveas(fig3, strcat(filename, "cr.png"));
+		[~, filename, ~] = fileparts(filename);
+		dir = "images/task2/";
+		saveas(fig1, strcat(dir, filename, "y.png"));
+		saveas(fig2, strcat(dir, filename, "cb.png"));
+		saveas(fig3, strcat(dir, filename, "cr.png"));
 end

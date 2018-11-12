@@ -195,13 +195,35 @@ The equations for the translation between the two colour spaces are shown in equ
 	b = y + 1.772(Cb - 128)
 \end{equation}
 
-Often when transmitted, YCbCr encoders will instead use the range of 16 to 235 for television signals. This is used to combat Gibbs phenomenon \cite{helmberg_1994}, which is introduced in the signal once filtered. The effect of Gibbs phenomemon is shown in figure \ref{fig:gibbs}. The high frequency components visible at sharp transition points introduce unwanted artifacts to the signal. This is likely also the reason for the metallic ringing sound introduced to the signal in the previous practical when a band of frequencies were zeroed from a signal after performing an FFT, and why more effective filters use a gradual drop off when filtering frequencies. The footroom and headrooom supplied by these unused bits are sometimes also used to store metadata on more reliable signals.
+Often when transmitted, YCbCr encoders will instead use the range of 16 to 235 for television signals. This is used to combat Gibbs phenomenon \cite{helmberg_1994}, which is introduced in the signal once filtered. The effect of Gibbs phenomemon is shown in figure \ref{fig:gibbs}. The high frequency components visible at sharp transition points introduce unwanted artifacts to the signal. This is likely also the reason for the metallic ringing sound introduced to the signal in the previous practical when a band of frequencies were zeroed from after performing an FFT, and why more effective filters use a gradual reduction in magnitude. The footroom and headrooom supplied by these unused bits are sometimes also used to store metadata on more reliable signals.
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{images/gibbs.svg}
   \caption{Gibbs Phenomenon when Approximating a Square Signal\cite{gibbs}.}
   \label{fig:gibbs}
 \end{figure}
+
+The custom implementations produced Figures \ref{fig:customYCbCrColourful}, \ref{fig:customYCbCrDrawing}, and \ref{fig:customYCbCrSimple}. The top left image for each figure is the result of \emph{imshow} on YCbCr values, where the YCbCr values are being incorrectly interpreted as RGB. In order to render the YCbCr components as RGB using \emph{imshow}, all other layers except the one being considered had to be 'zeroed', which has the value 128 in Cb and Cr
+
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task2/colourfulcustom.png}
+  \caption{Custom YCbCr translation of Figure \ref{fig:colourful}.}
+  \label{fig:customYCbCrColourful}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task2/drawingcustom.png}
+  \caption{Custom YCbCr translation of Figure \ref{fig:drawing}.}
+  \label{fig:customYCbCrDrawing}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/task2/simplecustom.png}
+  \caption{Custom YCbCr translation of Figure \ref{fig:simple}.}
+  \label{fig:customYCbCrSimple}
+\end{figure}
+
 
 \part*{Conclusion}
 
