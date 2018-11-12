@@ -25,18 +25,18 @@ function [] = subsampleYCbCr(filename, figureNumber)
 		Cr = subsampledYCbCr(:,:,3);
 
 		imageSize = size(yCbCr);
-		halfIntensityMatrix = 128 + zeros(imageSize(1), imageSize(2));
-
+		zeroIntensityMatrix = zeros(imageSize(1), imageSize(2));
+		halfIntensityMatrix = 128 + zeroIntensityMatrix; 
 		% Convert to RGB for rendering
 		downsampledYCbCr= cat(3, y,					  Cb,				   Cr);
 		yRGB  = ycbcr2rgb(cat(3, y,  				  halfIntensityMatrix, halfIntensityMatrix));
-		CbRGB = ycbcr2rgb(cat(3, halfIntensityMatrix, Cb, 				   halfIntensityMatrix));
-		CrRGB = ycbcr2rgb(cat(3, halfIntensityMatrix, halfIntensityMatrix, Cr));
+		CbRGB = ycbcr2rgb(cat(3, zeroIntensityMatrix, Cb, 				   halfIntensityMatrix));
+		CrRGB = ycbcr2rgb(cat(3, zeroIntensityMatrix, halfIntensityMatrix, Cr));
 
 		% Plots
 		fig0 = figure(figureNumber);
 		colorplot = subplot(1,1,1);
-		imshow(ycbcr2rgb(subsampledYCbCr))
+		imshow(ycbcr2rgb(downsampledYCbCr))
 		title(colorplot, "Subsampled YCbCr Image")
 
 		fig1 = figure(figureNumber+1);
@@ -61,9 +61,11 @@ function [] = subsampleYCbCr(filename, figureNumber)
 		title(differencePlot, "Difference in images")
 
 		% Save figures to file
-		%saveas(fig0, strcat(filename, "sub.png"));
-		%saveas(fig1, strcat(filename, "y.png"));
-		%saveas(fig2, strcat(filename, "cb.png"));
-		%saveas(fig3, strcat(filename, "cr.png"));
-		%saveas(fig4, strcat(filename, "diff.png"));
+		%[~, filename, ~] = fileparts(filename);
+		%dir = "images/task3/";
+		%saveas(fig0, strcat(dir, filename, "sub.png"));
+		%saveas(fig1, strcat(dir, filename, "y.png"));
+		%saveas(fig2, strcat(dir, filename, "cb.png"));
+		%saveas(fig3, strcat(dir, filename, "cr.png"));
+		%saveas(fig4, strcat(dir, filename, "diff.png"));
 end
