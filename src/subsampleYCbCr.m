@@ -5,6 +5,9 @@ function [] = subsampleYCbCr(filename, figureNumber)
 
 		yCbCr = rgb2ycbcr(X);
 
+		% Trim image to nearest multiple of 8 
+		yCbCr = trimToNearestMultiple(yCbCr, 8);
+
 		% Break each image into cells
 		imageCells = imageToCells(yCbCr, [8,8]);
 
@@ -21,7 +24,7 @@ function [] = subsampleYCbCr(filename, figureNumber)
 		Cb = subsampledYCbCr(:,:,2);
 		Cr = subsampledYCbCr(:,:,3);
 
-		imageSize = size(X);
+		imageSize = size(yCbCr);
 		halfIntensityMatrix = 128 + zeros(imageSize(1), imageSize(2));
 
 		% Convert to RGB for rendering
