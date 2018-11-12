@@ -515,15 +515,26 @@ For the simple image, the concentration of frequencies is almost completely in t
 In order to determine the heart rate of the person in the given video, the following steps were taken:
 
 \begin{enumerate}
-	\item 
+	\item For each frame of the video, produce the average luminance.
+	\item Produce a time value for each average luminance value using the frame rate.
+	\item Normalise the luminance signal to oscillate around 0.
+	\item Perform a fast fourier transform on the average values.
+	\item Plot the time and frequency domain of the average luminance.
 \end{enumerate}
 
+The luminance of each frame would vary with the flow of blood under the skin. By taking the average luminance of each frame, the signal is condensed to two dimensions. Since the luminance values are all positive, it was reduced to oscillate around zero by subtracting the average of the max and min values. The FFT could then be performed to transform the signal to the frequency domain, which when plotted would show the frequency of the change in luminance, i.e. the heartrate. 
 
-\part*{Conclusion}
+The nyquist limit was calculated from half of the frame rate of the video. Since a healthy human heart rate even during exercise only peaks at around 190bpm (~3Hz), the videos frame rate of 30Hz would not cause aliasing of the signal. 
 
-This practical was incredibly enjoyable (excluding the whine), and greatly helped my understanding of Matlab. Actually implementing the technologies discussed in lectures resulted in many rabbit holes of learning, and a better understanding of the content. For example, the various types of audio filters and their pros and cons, and why it isn't as simple as 'blocking' the unwanted frequencies. 
+The result can be seen in figure \ref{fig:heart}. From the frequency domain plot, we can determine with some confidence that the heart rate is around 1Hz, or in more common units, 60bpm. This aligns well with the average resting heartbeat. Measuring the time between peaks in the frequency plot also produces a period of ~1s therefore 1Hz. 
 
-I realised only close to the deadline that since on the schools Windows installs, the older version of Matlab (2017a) is used, and it did not have the bandpass function yet. However, in 2018b, it does exist, and so the scripts will only work on the linux machines. Given more time, I would have liked to replace the bandpass function with the more specific filters available, such as elliptical and chebyshev filters. 
+Hospitals and medical professionals often use a device that uses a similar mechanism to measure heart rates. A clip applied to the thumb shines an LED through the thumb, and a sensor on the opposite side detects the luminance over time in order to determine the heart rate of the wearer. Since oxygenated blood is lighter than deoxygenated blood, the red chromaticity could also possibly be used to determine the blood oxygen level of the wearer, providing more crucial information. 
+
+\begin{figure}[ht]
+  \includegraphics[width=\linewidth]{images/task5/Frequency.png}
+  \caption{Time and Frequency domain plots of the average luminance of the given video.}
+  \label{fig:heart}
+\end{figure}
 
 \bibliographystyle{unsrt}
 \bibliography{mybib}

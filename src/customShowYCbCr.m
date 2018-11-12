@@ -33,7 +33,7 @@ function [] = customShowYCbCr(filename, figureNumber)
 		title(CrPlot, "Chromatic Red Components")
 		
 		% Save figures to file
-		[~, filename, ~] = fileparts(filename);
-		dir = "images/task2/";
-		saveas(fig0, strcat(dir, filename, "custom.png"), "png");
+		%[~, filename, ~] = fileparts(filename);
+		%dir = "images/task2/";
+		%saveas(fig0, strcat(dir, filename, "custom.png"), "png");
 end

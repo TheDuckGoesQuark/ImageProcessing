@@ -55,11 +55,11 @@ function [] = showDCT(filename, figureNumber)
 		title(highFreqPlot, "High Frequency Component")
 
 		% Save figures to file
-		[~, filename, ~] = fileparts(filename);
-		dir = "images/task4/";
-		saveas(fig1, strcat(dir, filename, "y.png"));
-		saveas(fig2, strcat(dir, filename, "cb.png"));
-		saveas(fig3, strcat(dir, filename, "cr.png"));
-		saveas(fig4, strcat(dir, filename, "lf.png"));
-		saveas(fig5, strcat(dir, filename, "hf.png"));
+		%[~, filename, ~] = fileparts(filename);
+		%dir = "images/task4/";
+		%saveas(fig1, strcat(dir, filename, "y.png"));
+		%saveas(fig2, strcat(dir, filename, "cb.png"));
+		%saveas(fig3, strcat(dir, filename, "cr.png"));
+		%saveas(fig4, strcat(dir, filename, "lf.png"));
+		%saveas(fig5, strcat(dir, filename, "hf.png"));
 end
